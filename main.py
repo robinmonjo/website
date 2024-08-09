@@ -6,7 +6,7 @@ from components.education_card import education_card
 from components.favicon_link import favicon_link
 from components.atb import atb
 from components.home_btn import home_btn
-from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk, chat_bar
+from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk, chat_bar, chat_box_js
 from datetime import datetime
 from agent.agent import Agent
 from asyncio import sleep
@@ -18,6 +18,7 @@ hdrs = (
   MarkdownJS(),
   HighlightJS(langs=[]),
   Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous"),
+  Script(chat_box_js()),
   Style(".container { max-width: 800px; }"),
   Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
   favicon_link("👋")

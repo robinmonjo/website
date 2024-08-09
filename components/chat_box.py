@@ -1,6 +1,16 @@
 from fasthtml.common import *
 from components.fa import fa
 
+def chat_box_js():
+  return """
+    window.onload = (event) => {
+      const div = document.getElementById("messages-list");
+      if (div) {
+        div.scrollTop = div.scrollHeight;
+      }
+    };
+  """
+
 def chat_box(messages_list, session_key):
   return messages(messages_list), form(session_key)
 
@@ -29,7 +39,7 @@ def form(session_key):
     ws_connect=f"/messages_ws",
     ws_send=True,
     hx_on_htmx_ws_after_message="""
-      var div = document.getElementById("messages-list");
+      const div = document.getElementById("messages-list");
       div.scrollTop = div.scrollHeight;
     """
   )
