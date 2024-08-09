@@ -55,6 +55,7 @@ chat_bubble_style = """
   width: fit-content;
   padding: 10px 20px;
   border-radius: 20px;
+  color: black;
 """
 
 def user_chat_message(msg, idx):
