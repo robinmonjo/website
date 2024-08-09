@@ -6,7 +6,7 @@ from components.education_card import education_card
 from components.favicon_link import favicon_link
 from components.atb import atb
 from components.home_btn import home_btn
-from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk
+from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk, chat_bar
 from datetime import datetime
 from agent.agent import Agent
 from asyncio import sleep
@@ -56,6 +56,9 @@ def get(req):
 
 @app.ws("/messages_ws")
 async def messages_ws(msg:str, session_key:str, send):
+  # disable input
+  await send(chat_bar(enabled=False))
+
   agent = Agent(session_key)
   output = agent.streamed_answer(msg)
   messages_len = agent.messages_len()
@@ -83,6 +86,9 @@ async def messages_ws(msg:str, session_key:str, send):
       content += delta["content"]
 
   agent.save_answer(content)
+
+  # re-enable input
+  await send(chat_bar())
 
 
 @rt("/resume")

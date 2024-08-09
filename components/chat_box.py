@@ -23,7 +23,7 @@ def messages(messages_list):
 
 def form(session_key):
   return Form(
-    Group(chat_input(), Button(fa("arrow-up", size="lg"))),
+    chat_bar(),
     Input(type="hidden", name="session_key", value=session_key),
     hx_ext="ws",
     ws_connect=f"/messages_ws",
@@ -32,6 +32,21 @@ def form(session_key):
       var div = document.getElementById("messages-list");
       div.scrollTop = div.scrollHeight;
     """
+  )
+
+def chat_bar(enabled=True):
+  button_label = fa("arrow-up", size="lg") if enabled else ""
+
+  return Group(
+    chat_input(),
+    Button(
+      button_label,
+      aria_busy=("true" if not enabled else "false"),
+      aria_label=("Please wait" if not enabled else "")
+    ),
+    id="chat-bar",
+    disabled=(not enabled),
+    hx_swap_oob="true"
   )
 
 def chat_input():
