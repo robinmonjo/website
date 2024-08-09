@@ -5,6 +5,7 @@ from components.fa import fa
 from components.education_card import education_card
 from components.favicon_link import favicon_link
 from components.atb import atb
+from components.home_btn import home_btn
 from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk
 from datetime import datetime
 from agent.agent import Agent
@@ -32,14 +33,17 @@ bware = Beforeware(before, skip=[r'/favicon\.ico', r'/content/.*', r'.*\.css'])
 app,rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=True, before=bware)
 
 @rt("/")
-def get(session, req):
-  messages = Agent(session["key"]).messages
+def get(req):
   return layout(
     Div(
       read_md("catch_phrase"),
-      cls="marked"
+      cls="marked",
+      style="font-size: 1.5em; text-align: center;"
     ),
-    chat_box(messages, session["key"])
+    home_btn("briefcase", "Work Experience", "/resume"),
+    home_btn("school", "Education", "/education"),
+    home_btn("comment", "Ask Phi", "/ask_llm"),
+    style="align-items: center; display: flex; flex-direction: column; gap: 20px"
   )
 
 @app.ws("/messages_ws")
@@ -75,16 +79,23 @@ async def messages_ws(msg:str, session_key:str, send):
 
 @rt("/resume")
 def get(req):
-  return layout(Div(
+  return layout(
     read_md("resume"),
     cls="marked"
-  ))
+  )
 
 @rt("/education")
 def get(req):
   with open(f"content/education.json", "r") as f: content = json.load(f)
   return layout(
     education_card(item) for item in content
+  )
+
+@rt("/ask_llm")
+def get(session, req):
+  messages = Agent(session["key"]).messages
+  return layout(
+    chat_box(messages, session["key"])
   )
 
 @rt("/{fname:path}.pdf")
@@ -105,6 +116,7 @@ def nav():
       Ul(
         Li(A("Work", href="/resume", cls="contrast", style="font-size: 1.25em;")),
         Li(A("Education", href="/education", cls="contrast", style="font-size: 1.25em;")),
+        Li(A("Ask Phi", href="/ask_llm", cls="contrast", style="font-size: 1.25em;")),
         Li("|", style="color: lightgrey"),
         Li(brand_link("linkedin", "www.linkedin.com/in/robin-monjo-b1384a59/")),
         Li(brand_link("github", "github.com/robinmonjo")),

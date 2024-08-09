@@ -23,7 +23,7 @@ def messages(messages_list):
 
 def form(session_key):
   return Form(
-    Group(chat_input(), Button(fa("arrow-up", size="lg"), cls="contrast")),
+    Group(chat_input(), Button(fa("arrow-up", size="lg"))),
     Input(type="hidden", name="session_key", value=session_key),
     hx_ext="ws",
     ws_connect=f"/messages_ws",
