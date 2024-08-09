@@ -12,7 +12,7 @@ def messages(messages_list):
     id="messages-list",
     style="""
       height: fit-content;
-      max-height: 55vh;
+      max-height: 65vh;
       overflow-y: auto;
       display: flex;
       flex-direction: column;

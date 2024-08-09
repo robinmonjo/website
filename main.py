@@ -61,7 +61,7 @@ async def messages_ws(msg:str, session_key:str, send):
   next_message_idx = messages_len + 1
 
   # send an empty message from the agent
-  waiting_message = "..." if agent.model_warmed_up() else "Please wait, I'm waking up"
+  waiting_message = "🤔..." if agent.model_warmed_up() else "Please wait, I'm waking up 🥱. Will answer in a few seconds..."
   await send(assistant_chat_message(waiting_message, next_message_idx))
 
   await sleep(0.0) # flush the event loop ?? seems weird

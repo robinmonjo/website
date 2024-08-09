@@ -8,6 +8,7 @@ Style:
 - [] markdown chat bubble
 - [] scroll to bottom chat
 - [] check school image in dark mode
+- [] disable chat while answering
 
 
 Content:
