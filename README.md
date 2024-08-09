@@ -18,6 +18,7 @@ Content:
 - [] Reading list section
 - [] optimize llm context
 - [] add datascientest formation
+- [] ask phi page: sample questions, about the model, be nice ...
 
 Ops:
 - [] deployment
@@ -28,7 +29,7 @@ Layout:
 - [x] home page catch phrase with 3 buttons: Work XP, Education, Ask Phi + link in the top bar
 
 Other:
-- [] make session expire
+- [x] make session expire
 - [] use 128k context ?
 
 Reading list

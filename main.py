@@ -23,10 +23,18 @@ hdrs = (
   favicon_link("👋")
 )
 
-def before(req, session):
-  # TODO handle expiration logic
+SESSION_EXPIRATION_DELAY = 2 * 60 * 60 # 2 hours
+
+def set_session(session):
   session.setdefault("key", str(uuid.uuid4()))
   session.setdefault("ts", str(time.time()))
+
+def before(req, session):
+  if not session:
+    set_session(session)
+  elif time.time() - float(session["ts"]) > SESSION_EXPIRATION_DELAY:
+    session.clear()
+    set_session(session)
 
 bware = Beforeware(before, skip=[r'/favicon\.ico', r'/content/.*', r'.*\.css'])
 
