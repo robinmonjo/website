@@ -1,0 +1,73 @@
+[
+  {
+    "establishment": "Polytech Nice-Sophia",
+    "diploma": "Software Engineer final year",
+    "flag": "🇫🇷",
+    "years": "2012 - 2013",
+    "notes": "Last year engineering studies, grade 16.3/20, ranked 1",
+    "website": "https://polytech.univ-cotedazur.fr/",
+    "logo": "education_logos/polytech.png",
+    "courses": [
+      "Software Architecture",
+      "Service Oriented Architecture",
+      "Large scale distributed systems",
+      "Applications security and intrusion detection",
+      "Network Administration",
+      "Design and Evaluation of HCI",
+      "Model Engineering"
+    ]
+  },
+  {
+    "establishment": "Western University",
+    "diploma": "Software Engineer year 2",
+    "flag": "🇨🇦",
+    "years": "2011 - 2012",
+    "notes": "Exchange student, grade 83/100",
+    "website": "https://www.uwo.ca/",
+    "logo": "education_logos/uwo.png",
+    "courses": [
+      "Requirement Engineering",
+      "Computer Network",
+      "Computer Graphics",
+      "Object Oriented design and analysis",
+      "Game engine development",
+      "Human Computer Interaction",
+      "Analysis of algorithms",
+      "Operating Systems",
+      "Software Architecture"
+    ]
+  },
+  {
+    "establishment": "Polytech Nice-Sophia",
+    "diploma": "Software Engineer year 1",
+    "flag": "🇫🇷",
+    "years": "2010 - 2011",
+    "website": "https://polytech.univ-cotedazur.fr/",
+    "logo": "education_logos/polytech.png"
+  },
+  {
+    "establishment": "Oxford Brookes University",
+    "diploma": "Bachelor of Sciences in Computer Science",
+    "flag": "🇬🇧",
+    "years": "2009 - 2010",
+    "notes": "Grade 69/100",
+    "website": "https://www.brookes.ac.uk/",
+    "logo": "education_logos/brookes.png",
+    "courses": [
+      "Multimedia Application",
+      "Object & Component Technology",
+      "Computer & Network Security",
+      "Project",
+      "Artificial Intelligence 1",
+      "Artificial Intelligence 2"
+    ]
+  },
+  {
+    "establishment": "IUT Grenoble",
+    "diploma": "DUT informatique",
+    "flag": "🇫🇷",
+    "years": "2007 - 2009",
+    "website": "https://iut2.univ-grenoble-alpes.fr/",
+    "logo": "education_logos/iut2.png"
+  }
+]
