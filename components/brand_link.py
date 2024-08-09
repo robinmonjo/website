@@ -1,12 +1,11 @@
 from fasthtml.common import *
 from components.fa import fa
+from components.atb import atb
 
 
 def brand_link(name, url):
-  return A(
+  return atb(
     fa(name, size="lg"),
-    rel="noopener noreferrer",
     href=f"https://{url}",
-    target="_blank",
     cls="contrast"
   )

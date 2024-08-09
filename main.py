@@ -4,6 +4,7 @@ from components.brand_link import brand_link
 from components.fa import fa
 from components.education_card import education_card
 from components.favicon_link import favicon_link
+from components.atb import atb
 from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk
 from datetime import datetime
 from agent.agent import Agent
@@ -118,12 +119,20 @@ def footer():
     Hr(),
     Div(
       Small("Built with",
-        A(
+        atb(
           Img(src="/content/fasthtml_logo.svg", alt="FastHTML", width="60"),
           href="https://www.fastht.ml/",
-          target="_blank",
-          rel="noopener noreferrer",
           style="text-decoration: none;"
+        ),
+        "-",
+        atb(
+          "Report an issue",
+          href="https://github.com/robinmonjo/website/issues"
+        ),
+        "-",
+        atb(
+          "See code",
+          href="https://github.com/robinmonjo/website"
         )
       ),
       Small(
