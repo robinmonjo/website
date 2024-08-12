@@ -24,7 +24,7 @@ class LlmSingleton:
     self.model = Llama(
       model_path=os.path.join("models", MODEL),
       n_ctx=131072, # 128 KB
-      verbose=True,
+      verbose=False,
       use_mlock=True
     )
 
