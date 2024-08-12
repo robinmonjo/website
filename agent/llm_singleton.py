@@ -1,5 +1,8 @@
 from llama_cpp import Llama
 import threading
+import os.path
+
+MODEL = "Phi-3.1-mini-128k-instruct-Q4_K_M.gguf"
 
 class LlmSingleton:
   _instance = None
@@ -18,9 +21,9 @@ class LlmSingleton:
     self.model_warmed_up = False
 
     self.model = Llama(
-      model_path="Phi-3-mini-4k-instruct-q4.gguf",
-      n_ctx=4096,
-      verbose=False,
+      model_path=os.path.join("models", MODEL),
+      n_ctx=131072, # 128 KB
+      verbose=True,
       use_mlock=True
     )
 

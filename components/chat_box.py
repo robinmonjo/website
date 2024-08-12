@@ -1,5 +1,6 @@
 from fasthtml.common import *
 from components.fa import fa
+from components.atb import atb
 
 def chat_box_js():
   return """
@@ -12,7 +13,7 @@ def chat_box_js():
   """
 
 def chat_box(messages_list, session_key):
-  return messages(messages_list), form(session_key)
+  return messages(messages_list), form(session_key), about()
 
 def messages(messages_list):
   messages = [chat_message(m, i) for i, m in enumerate(messages_list)]
@@ -22,7 +23,7 @@ def messages(messages_list):
     id="messages-list",
     style="""
       height: fit-content;
-      max-height: 65vh;
+      max-height: 60vh;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
@@ -111,4 +112,12 @@ def assistant_chat_message(msg, idx):
 def chat_message_chunk(chunk, idx, clear=False):
   oob = f"innerHTML:#msg-{idx}" if clear else f"beforeend:#msg-{idx}"
   return Span(chunk, hx_swap_oob=oob)
+
+def about():
+  return Small(
+    fa("info-circle"),
+    "Please, be nice 😊. You are talking to a self hosted 3.8B parameters LLM:",
+    atb("Phi 3 mini.", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
+    "Chat sessions are recorded for imrpovements but 100% anonymous."
+  )
 

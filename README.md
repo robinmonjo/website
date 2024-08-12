@@ -17,8 +17,8 @@ Content:
 - [ ] Mail to: robinmonjo@gmail.com (later use my domain ?)
 - [ ] Reading list section
 - [ ] optimize llm context
-- [ ] add datascientest formation
-- [ ] ask phi page: sample questions, about the model, be nice ...
+- [x] add datascientest formation
+- [x] ask phi page: sample questions, about the model, be nice ...
 
 Ops:
 - [ ] deployment
@@ -30,6 +30,6 @@ Layout:
 
 Other:
 - [x] make session expire
-- [ ] use 128k context ?
+- [x] use 128k context ?
 
 Reading list
