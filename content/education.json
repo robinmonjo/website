@@ -1,5 +1,14 @@
 [
   {
+    "establishment": "Datascientest",
+    "diploma": "Data Scientist Bootcamp",
+    "flag": "🇫🇷",
+    "years": "Sept. - Dec. 2024",
+    "notes": "MINES Paris certification",
+    "website": "https://datascientest.com/en/",
+    "logo": "education_logos/datascientest.png"
+  },
+  {
     "establishment": "Polytech Nice-Sophia",
     "diploma": "Software Engineer final year",
     "flag": "🇫🇷",
