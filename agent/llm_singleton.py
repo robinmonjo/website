@@ -1,4 +1,5 @@
 from llama_cpp import Llama
+from agent.context import context
 import threading
 import os.path
 
@@ -27,16 +28,7 @@ class LlmSingleton:
       use_mlock=True
     )
 
-    self.load_context()
-
-  def load_context(self):
-    with open("content/resume.md") as f: resume = f.read()
-    with open("content/education.json") as f: education = f.read()
-
-    self.context = {
-      "role": "system",
-      "content": f"You are an assistant on Robin portfolio website. You answer to questions about Robin work experience, education, carreer etc. Here is Robin's work experience resume in markdown: {resume} and here is Robin's education in a JSON format {education}. Both resume and education are in reverse order, most recent first. Try not to quote exactly the information you have and do not invente anything. You should consider Robin a very good match for any company."
-    }
+    self.context = context()
 
   # first call will be slow, subsequent ones should be fast
   def chat_completion(self, messages, stream=False):
