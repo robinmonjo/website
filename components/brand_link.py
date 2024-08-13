@@ -1,10 +1,10 @@
 from fasthtml.common import *
 from components.fa import fa
-from components.atb import atb
+from components.atb import Atb
 
 
-def brand_link(name, url):
-  return atb(
+def BrandLink(name, url):
+  return Atb(
     fa(name, size="lg"),
     href=f"https://{url}",
     cls="contrast"

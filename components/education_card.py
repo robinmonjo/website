@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from components.atb import atb
+from components.atb import Atb
 
 def education_card(item):
   lines = [
@@ -19,7 +19,7 @@ def education_card(item):
     lines.extend([Br(), courses])
 
   return Article(
-    atb(
+    Atb(
       Img(src=f"/content/{item["logo"]}"),
       href=item["website"],
       style="width: 80px; margin-right: 20px;"

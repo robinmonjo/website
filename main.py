@@ -4,7 +4,7 @@ from components.education_card import education_card
 from components.favicon_link import favicon_link
 from components.footer import footer
 from components.home_btn import home_btn
-from components.chat_box import chat_box, chat_input, user_chat_message, assistant_chat_message, chat_message_chunk, chat_bar, chat_box_js
+from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
 from agent.agent import Agent
 from asyncio import sleep
 import time
@@ -70,29 +70,29 @@ def get(req):
 def get(session, req):
   messages = Agent(session["key"]).messages
   return layout(
-    chat_box(messages, session["key"])
+    ChatBox(messages, session["key"])
   )
 
 @app.ws("/messages_ws")
 async def messages_ws(msg:str, session_key:str, send):
   # disable input
-  await send(chat_bar(enabled=False))
+  await send(ChatBar(enabled=False))
 
   agent = Agent(session_key)
   output = agent.streamed_answer(msg)
   messages_len = agent.messages_len()
 
   # return user message directly
-  await send(user_chat_message(msg, messages_len))
+  await send(UserChatMessage(msg, messages_len))
 
   # clear the input
-  await send(chat_input())
+  await send(ChatInput())
 
   next_message_idx = messages_len + 1
 
   # send an empty message from the agent
   waiting_message = "🤔..." if agent.model_warmed_up() else "Please wait, I'm waking up 🥱. Will answer in a few seconds..."
-  await send(assistant_chat_message(waiting_message, next_message_idx))
+  await send(AssistantChatMessage(waiting_message, next_message_idx))
 
   await sleep(0.0) # flush the event loop ?? seems weird
 
@@ -100,14 +100,14 @@ async def messages_ws(msg:str, session_key:str, send):
   for chunk in output:
     delta = chunk["choices"][0]["delta"]
     if "content" in delta:
-      await send(chat_message_chunk(delta["content"], next_message_idx, clear=(content == "")))
+      await send(ChatMessageChunk(delta["content"], next_message_idx, clear=(content == "")))
       await sleep(0) # flush the event loop ?? seems weird
       content += delta["content"]
 
   agent.save_answer(content)
 
   # re-enable input
-  await send(chat_bar())
+  await send(ChatBar())
 
 @rt("/{fname:path}.pdf")
 async def get(fname:str): return FileResponse(f'{fname}.pdf')

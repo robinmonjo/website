@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from components.atb import atb
+from components.atb import Atb
 from datetime import datetime
 
 def footer():
@@ -7,18 +7,18 @@ def footer():
     Hr(),
     Div(
       Small("Built with",
-        atb(
+        Atb(
           Img(src="/content/fasthtml_logo.svg", alt="FastHTML", width="60"),
           href="https://www.fastht.ml/",
           style="text-decoration: none;"
         ),
         "-",
-        atb(
+        Atb(
           "Report an issue",
           href="https://github.com/robinmonjo/website/issues"
         ),
         "-",
-        atb(
+        Atb(
           "See code",
           href="https://github.com/robinmonjo/website"
         )

@@ -1,6 +1,6 @@
 from fasthtml.common import *
 from components.fa import fa
-from components.atb import atb
+from components.atb import Atb
 
 def chat_box_js():
   return """
@@ -12,11 +12,11 @@ def chat_box_js():
     };
   """
 
-def chat_box(messages_list, session_key):
-  return messages(messages_list), form(session_key), about()
+def ChatBox(messages_list, session_key):
+  return Messages(messages_list), MessageForm(session_key), About()
 
-def messages(messages_list):
-  messages = [chat_message(m, i) for i, m in enumerate(messages_list)]
+def Messages(messages_list):
+  messages = [ChatMessage(m, i) for i, m in enumerate(messages_list)]
 
   return Div(
     *messages,
@@ -32,9 +32,9 @@ def messages(messages_list):
     """
   )
 
-def form(session_key):
+def MessageForm(session_key):
   return Form(
-    chat_bar(),
+    ChatBar(),
     Input(type="hidden", name="session_key", value=session_key),
     hx_ext="ws",
     ws_connect=f"/messages_ws",
@@ -45,11 +45,11 @@ def form(session_key):
     """
   )
 
-def chat_bar(enabled=True):
+def ChatBar(enabled=True):
   button_label = fa("arrow-up", size="lg") if enabled else ""
 
   return Group(
-    chat_input(),
+    ChatInput(),
     Button(
       button_label,
       aria_busy=("true" if not enabled else "false"),
@@ -60,7 +60,7 @@ def chat_bar(enabled=True):
     hx_swap_oob="true"
   )
 
-def chat_input():
+def ChatInput():
   return Input(
     type="text",
     autofocus="true",
@@ -70,11 +70,11 @@ def chat_input():
     hx_swap_oob="true"
   )
 
-def chat_message(msg, idx):
-  fn = user_chat_message if msg["role"] == "user" else assistant_chat_message
-  return fn(msg["content"], idx)
+def ChatMessage(msg, idx):
+  comp = UserChatMessage if msg["role"] == "user" else AssistantChatMessage
+  return comp(msg["content"], idx)
 
-def chat_message_div(*args, **kwargs):
+def ChatMessageDiv(*args, **kwargs):
   return Div(*args, **kwargs, hx_swap_oob="beforeend:#messages-list")
 
 chat_bubble_style = """
@@ -84,8 +84,8 @@ chat_bubble_style = """
   color: black;
 """
 
-def user_chat_message(msg, idx):
-  return chat_message_div(
+def UserChatMessage(msg, idx):
+  return ChatMessageDiv(
     Div(
       msg,
       id=f"msg-{idx}",
@@ -97,8 +97,8 @@ def user_chat_message(msg, idx):
     )
   )
 
-def assistant_chat_message(msg, idx):
-  return chat_message_div(
+def AssistantChatMessage(msg, idx):
+  return ChatMessageDiv(
     Div(
       msg,
       id=f"msg-{idx}",
@@ -109,15 +109,15 @@ def assistant_chat_message(msg, idx):
     )
   )
 
-def chat_message_chunk(chunk, idx, clear=False):
+def ChatMessageChunk(chunk, idx, clear=False):
   oob = f"innerHTML:#msg-{idx}" if clear else f"beforeend:#msg-{idx}"
   return Span(chunk, hx_swap_oob=oob)
 
-def about():
+def About():
   return Small(
     fa("info-circle"),
     "Please, be nice 😊. You are talking to a self hosted 3.8B parameters LLM:",
-    atb("Phi 3 mini.", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
-    "Chat sessions are recorded for imrpovements but 100% anonymous."
+    Atb("Phi 3 mini.", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
+    "Chat sessions are recorded for improvements but 100% anonymous."
   )
 

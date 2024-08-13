@@ -1,5 +1,5 @@
 from fasthtml.common import *
 
-def atb(*args, **kwargs):
+def Atb(*args, **kwargs):
   return A(*args, **kwargs, target="_blank", rel="noopener noreferrer")
 

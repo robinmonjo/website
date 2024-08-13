@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from components.brand_link import brand_link
+from components.brand_link import BrandLink
 from components.title import title
 
 def nav_bar():
@@ -13,9 +13,9 @@ def nav_bar():
         Li(A("Education", href="/education", cls="contrast", style="font-size: 1.25em;")),
         Li(A("Ask Phi", href="/ask_llm", cls="contrast", style="font-size: 1.25em;")),
         Li("|", style="color: lightgrey"),
-        Li(brand_link("linkedin", "www.linkedin.com/in/robin-monjo-b1384a59/")),
-        Li(brand_link("github", "github.com/robinmonjo")),
-        Li(brand_link("stack-overflow", "stackoverflow.com/users/251552/rmonjo"))
+        Li(BrandLink("linkedin", "www.linkedin.com/in/robin-monjo-b1384a59/")),
+        Li(BrandLink("github", "github.com/robinmonjo")),
+        Li(BrandLink("stack-overflow", "stackoverflow.com/users/251552/rmonjo"))
       )
     ),
     cls="container",
