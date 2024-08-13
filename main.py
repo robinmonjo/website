@@ -40,7 +40,7 @@ app,rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=True, before=bware)
 
 @rt("/")
 def get(req):
-  return layout(
+  return Layout(
     Div(
       read_md("catch_phrase"),
       cls="marked",
@@ -49,12 +49,13 @@ def get(req):
     home_btn("briefcase", "Work Experience", "/resume"),
     home_btn("school", "Education", "/education"),
     home_btn("comment", "Ask Phi", "/ask_llm"),
+    home_btn("book", "Reading List", "/reading_list"),
     style="align-items: center; display: flex; flex-direction: column; gap: 20px"
   )
 
 @rt("/resume")
 def get(req):
-  return layout(
+  return Layout(
     read_md("resume"),
     cls="marked"
   )
@@ -62,14 +63,14 @@ def get(req):
 @rt("/education")
 def get(req):
   with open(f"content/education.json", "r") as f: content = json.load(f)
-  return layout(
+  return Layout(
     education_card(item) for item in content
   )
 
 @rt("/ask_llm")
 def get(session, req):
   messages = Agent(session["key"]).messages
-  return layout(
+  return Layout(
     ChatBox(messages, session["key"])
   )
 
@@ -109,10 +110,14 @@ async def messages_ws(msg:str, session_key:str, send):
   # re-enable input
   await send(ChatBar())
 
+@rt("/reading_list")
+def get(req):
+  return Layout("Coming soon ...")
+
 @rt("/{fname:path}.pdf")
 async def get(fname:str): return FileResponse(f'{fname}.pdf')
 
-def layout(*args, **kwargs):
+def Layout(*args, **kwargs):
   return Title("R. Monjo"), nav_bar(), Main(
     Div(*args, **kwargs),
     cls="container"
