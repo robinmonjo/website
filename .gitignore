@@ -30,3 +30,5 @@ htmlcov/
 
 chat_sessions/chat_*
 models/*
+nbs/x_cookies.json
+nbs/raw_x_cookies.json
