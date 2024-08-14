@@ -13,6 +13,6 @@ def Tweet(tweet, next_page=None):
     }
 
   return Div(
-    f"{tweet.user_name} - {tweet.full_text}",
+    f"{tweet.user_name} - {tweet.cleaned_text()}",
     **props
   )
