@@ -9,11 +9,34 @@ def chat_box_js():
       if (div) {
         div.scrollTop = div.scrollHeight;
       }
+
+      const input = document.getElementById("msg-input");
+      const form = document.getElementById("msg-form");
+      if (input && form) {
+
+        const suggestedQuestions = document.querySelectorAll(".suggested-question");
+
+        suggestedQuestions.forEach((div) => {
+          div.onclick = () => {
+            const text = div.innerText || div.textContent;
+            input.value = text;
+            const event = new Event("submit");
+            form.dispatchEvent(event);
+
+            suggestedQuestions.forEach(elem => elem.remove());
+          };
+        });
+      }
     };
   """
 
 def ChatBox(messages_list, session_key):
-  return Messages(messages_list), MessageForm(session_key), About()
+  return SuggestedQuestions(messages_list), Messages(messages_list), MessageForm(session_key), About()
+
+def SuggestedQuestions(messages_list):
+  if messages_list: return None
+
+  return Div("Does Robin knows about Kubernetes ?", cls="suggested-question"), Div("Has Robin followed courses on software architecture?", cls="suggested-question")
 
 def Messages(messages_list):
   messages = [ChatMessage(m, i) for i, m in enumerate(messages_list)]
@@ -42,7 +65,8 @@ def MessageForm(session_key):
     hx_on_htmx_ws_after_message="""
       const div = document.getElementById("messages-list");
       div.scrollTop = div.scrollHeight;
-    """
+    """,
+    id="msg-form"
   )
 
 def ChatBar(enabled=True):

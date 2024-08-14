@@ -28,7 +28,10 @@ class LlmSingleton:
       use_mlock=True
     )
 
-    self.context = context()
+    self.context = {
+      "role": "system",
+      "content": context()
+    }
 
   # first call will be slow, subsequent ones should be fast
   def chat_completion(self, messages, stream=False):
