@@ -52,28 +52,32 @@ def get(req):
     HomeBtn("school", "Education", "/education"),
     HomeBtn("comment", "Ask Phi", "/ask_llm"),
     HomeBtn("book", "Reading List", "/reading_list"),
-    style="align-items: center; display: flex; flex-direction: column; gap: 20px"
+    style="align-items: center; display: flex; flex-direction: column; gap: 20px",
+    current_path=req.url.path
   )
 
 @rt("/resume")
 def get(req):
   return Layout(
     read_md("resume"),
-    cls="marked"
+    cls="marked",
+    current_path=req.url.path
   )
 
 @rt("/education")
 def get(req):
   with open(f"content/education.json", "r") as f: content = json.load(f)
   return Layout(
-    EducationCard(item) for item in content
+    *[EducationCard(item) for item in content],
+    current_path=req.url.path
   )
 
 @rt("/ask_llm")
 def get(session, req):
   messages = Agent(session["key"]).messages
   return Layout(
-    ChatBox(messages, session["key"])
+    ChatBox(messages, session["key"]),
+    current_path=req.url.path
   )
 
 @app.ws("/messages_ws")
@@ -113,7 +117,7 @@ async def messages_ws(msg:str, session_key:str, send):
   await send(ChatBar())
 
 @rt("/reading_list")
-def get(page:int=1):
+def get(req, page:int=1):
   tweets = tweets_db.fetch(page=page)
   if not tweets: return None
 
@@ -123,14 +127,16 @@ def get(page:int=1):
 
   return Layout(
     TweetListHeader(tweets_db.count(), tweets_db.last_synchronized_at()),
-    TweetList(tweets, page)
+    TweetList(tweets, page),
+    current_path=req.url.path
   )
 
 @rt("/{fname:path}.pdf")
 async def get(fname:str): return FileResponse(f'{fname}.pdf')
 
 def Layout(*args, **kwargs):
-  return Title("R. Monjo"), NavBar(), Main(
+  current_path = kwargs.pop("current_path")
+  return Title("R. Monjo"), NavBar(current_path=current_path), Main(
     Div(*args, **kwargs),
     cls="container"
   ), PageFooter()
