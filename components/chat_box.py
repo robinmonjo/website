@@ -1,6 +1,8 @@
 from fasthtml.common import *
 from components.fa import Fa
 from components.atb import Atb
+import json
+import random
 
 def chat_box_js():
   return """
@@ -9,21 +11,18 @@ def chat_box_js():
 
       const input = document.getElementById("msg-input");
       const form = document.getElementById("msg-form");
-      if (input && form) {
+      const suggestedQuestions = document.querySelectorAll(".suggested-question");
 
-        const suggestedQuestions = document.querySelectorAll(".suggested-question");
+      suggestedQuestions.forEach((div) => {
+        div.onclick = () => {
+          const text = div.innerText || div.textContent;
+          input.value = text;
+          const event = new Event("submit");
+          form.dispatchEvent(event);
 
-        suggestedQuestions.forEach((div) => {
-          div.onclick = () => {
-            const text = div.innerText || div.textContent;
-            input.value = text;
-            const event = new Event("submit");
-            form.dispatchEvent(event);
-
-            deleteSuggestedQuestions();
-          };
-        });
-      }
+          deleteSuggestedQuestions();
+        };
+      });
     };
 
     const deleteSuggestedQuestions = () => {
@@ -40,15 +39,18 @@ def chat_box_js():
   """
 
 def ChatBox(messages_list, session_key):
-  return SuggestedQuestions(messages_list), Messages(messages_list), MessageForm(session_key), About()
+  return Script(chat_box_js()), SuggestedQuestions(messages_list), Messages(messages_list), MessageForm(session_key), About()
+
+
 
 def SuggestedQuestions(messages_list):
   if messages_list: return None
 
+  with open(f"content/suggested_questions.json", "r") as f: questions = random.sample(json.load(f), 2)
+
   return Div(
     H6("👋 Ask me something 😊"),
-    SuggestedQuestion("Does Robin knows about Kubernetes ?"),
-    SuggestedQuestion("Has Robin followed courses on software architecture?"),
+    *[SuggestedQuestion(q) for q in questions],
     id="suggested-questions"
   )
 
