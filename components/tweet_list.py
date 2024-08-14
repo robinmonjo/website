@@ -4,10 +4,18 @@ from components.fa import Fa
 
 def TweetListHeader(count, last_synchronized_at):
   return Div(
+    P(
+      Fa("info-circle"),
+      """
+      I use Twitter/X to stay updated on IT news. It allows me to aggregate every news source I can be interested in (websites and people). To add something to my reading list, I simply like ♥️ the tweet. Don't follow me on X I'm just a consumer
+      """,
+      Atb("(@b0baille)", href="https://x.com/b0baille"),
+      "😋, but you can find below the tweets I liked."
+    ),
     Small(f"""
       Synchronized {last_synchronized_at.strftime("%d %b. %Y")} - {count} articles
     """),
-    style="text-align: right; margin-bottom: 10px;"
+    style="margin-bottom: 10px;"
   )
 
 def TweetList(tweets, page):
