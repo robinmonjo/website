@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from components.nav_bar import nav_bar
+from components.nav_bar import NavBar
 from components.education_card import EducationCard
 from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
@@ -129,7 +129,7 @@ def get(page:int=1):
 async def get(fname:str): return FileResponse(f'{fname}.pdf')
 
 def Layout(*args, **kwargs):
-  return Title("R. Monjo"), nav_bar(), Main(
+  return Title("R. Monjo"), NavBar(), Main(
     Div(*args, **kwargs),
     cls="container"
   ), PageFooter()

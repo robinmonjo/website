@@ -2,7 +2,7 @@ from fasthtml.common import *
 from components.brand_link import BrandLink
 from components.title import Title
 
-def nav_bar():
+def NavBar():
   return Header(
     Nav(
       Ul(
