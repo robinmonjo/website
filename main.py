@@ -2,7 +2,7 @@ from fasthtml.common import *
 from components.nav_bar import nav_bar
 from components.education_card import EducationCard
 from components.favicon_link import favicon_link
-from components.footer import footer
+from components.page_footer import PageFooter
 from components.home_btn import home_btn
 from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
 from components.tweet_list import TweetList
@@ -132,7 +132,7 @@ def Layout(*args, **kwargs):
   return Title("R. Monjo"), nav_bar(), Main(
     Div(*args, **kwargs),
     cls="container"
-  ), footer()
+  ), PageFooter()
 
 def read_md(file):
   with open(f"content/{file}.md", "r") as f: content = f.read()

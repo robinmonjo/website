@@ -2,7 +2,7 @@ from fasthtml.common import *
 from components.atb import Atb
 from datetime import datetime
 
-def footer():
+def PageFooter():
   return Footer(
     Hr(),
     Div(
