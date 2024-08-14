@@ -5,7 +5,9 @@ from components.favicon_link import favicon_link
 from components.footer import footer
 from components.home_btn import home_btn
 from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
+from components.tweet_list import TweetList
 from agent.agent import Agent
+from tweets.tweets import fetch_tweets
 from asyncio import sleep
 import time
 import json
@@ -111,8 +113,17 @@ async def messages_ws(msg:str, session_key:str, send):
   await send(ChatBar())
 
 @rt("/reading_list")
-def get(req):
-  return Layout("Coming soon ...")
+def get(page:int=1):
+  tweets = fetch_tweets(page=page)
+  if not tweets: return None
+
+  if page > 1:
+    # htmx load more request, no layout
+    return TweetList(tweets, page)
+
+  return Layout(
+    TweetList(tweets, page)
+  )
 
 @rt("/{fname:path}.pdf")
 async def get(fname:str): return FileResponse(f'{fname}.pdf')
