@@ -4,7 +4,7 @@ from components.education_card import EducationCard
 from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
 from components.home_btn import HomeBtn
-from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
+from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar
 from components.tweet_list import TweetList, TweetListHeader
 from agent.agent import Agent
 import tweets.tweets_db as tweets_db
@@ -17,7 +17,6 @@ hdrs = (
   MarkdownJS(),
   HighlightJS(langs=[]),
   Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous"),
-  #Script(chat_box_js()),
   Style(".container { max-width: 800px; }"),
   Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
   FaviconLink("👋")
