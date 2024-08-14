@@ -1,5 +1,5 @@
 from fasthtml.common import *
-from components.fa import fa
+from components.fa import Fa
 from components.atb import Atb
 
 def chat_box_js():
@@ -46,7 +46,7 @@ def MessageForm(session_key):
   )
 
 def ChatBar(enabled=True):
-  button_label = fa("arrow-up", size="lg") if enabled else ""
+  button_label = Fa("arrow-up", size="lg") if enabled else ""
 
   return Group(
     ChatInput(),
@@ -115,7 +115,7 @@ def ChatMessageChunk(chunk, idx, clear=False):
 
 def About():
   return Small(
-    fa("info-circle"),
+    Fa("info-circle"),
     "Please, be nice 😊. You are talking to a self hosted 3.8B parameters LLM:",
     Atb("Phi 3 mini.", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
     "Chat sessions are recorded for improvements but 100% anonymous."
