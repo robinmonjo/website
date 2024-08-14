@@ -1,7 +1,7 @@
 from fasthtml.common import *
 from components.nav_bar import nav_bar
 from components.education_card import EducationCard
-from components.favicon_link import favicon_link
+from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
 from components.home_btn import home_btn
 from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
@@ -20,7 +20,7 @@ hdrs = (
   Script(chat_box_js()),
   Style(".container { max-width: 800px; }"),
   Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
-  favicon_link("👋")
+  FaviconLink("👋")
 )
 
 SESSION_EXPIRATION_DELAY = 2 * 60 * 60 # 2 hours
