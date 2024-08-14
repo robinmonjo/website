@@ -5,10 +5,7 @@ from components.atb import Atb
 def chat_box_js():
   return """
     window.onload = (event) => {
-      const div = document.getElementById("messages-list");
-      if (div) {
-        div.scrollTop = div.scrollHeight;
-      }
+      scrollMessagesListDown();
 
       const input = document.getElementById("msg-input");
       const form = document.getElementById("msg-form");
@@ -23,10 +20,22 @@ def chat_box_js():
             const event = new Event("submit");
             form.dispatchEvent(event);
 
-            suggestedQuestions.forEach(elem => elem.remove());
+            deleteSuggestedQuestions();
           };
         });
       }
+    };
+
+    const deleteSuggestedQuestions = () => {
+      const div = document.getElementById("suggested-questions");
+      if (div) {
+        div.remove();
+      }
+    };
+
+    const scrollMessagesListDown = () => {
+      const div = document.getElementById("messages-list");
+      div.scrollTop = div.scrollHeight;
     };
   """
 
@@ -36,7 +45,24 @@ def ChatBox(messages_list, session_key):
 def SuggestedQuestions(messages_list):
   if messages_list: return None
 
-  return Div("Does Robin knows about Kubernetes ?", cls="suggested-question"), Div("Has Robin followed courses on software architecture?", cls="suggested-question")
+  return Div(
+    H6("👋 Ask me something 😊"),
+    SuggestedQuestion("Does Robin knows about Kubernetes ?"),
+    SuggestedQuestion("Has Robin followed courses on software architecture?"),
+    id="suggested-questions"
+  )
+
+def SuggestedQuestion(q):
+  return Div(
+    q,
+    style=f"""
+    background: rgb(244, 244, 244, 1);
+    cursor: pointer;
+    margin-bottom: 5px;
+    {chat_bubble_style}
+    """,
+    cls="suggested-question"
+  )
 
 def Messages(messages_list):
   messages = [ChatMessage(m, i) for i, m in enumerate(messages_list)]
@@ -63,8 +89,8 @@ def MessageForm(session_key):
     ws_connect=f"/messages_ws",
     ws_send=True,
     hx_on_htmx_ws_after_message="""
-      const div = document.getElementById("messages-list");
-      div.scrollTop = div.scrollHeight;
+      scrollMessagesListDown();
+      deleteSuggestedQuestions();
     """,
     id="msg-form"
   )
