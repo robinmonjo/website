@@ -53,7 +53,7 @@ def Content(tweet):
 
 def ContentWithThumbnail(tweet, content):
   return Div(
-    Img(src=tweet.thumbnail_url, alt=tweet.thumbnail_title, style="max-width: 90px;"),
+    Img(src=tweet.thumbnail_url, alt=tweet.thumbnail_title, style="max-width: 90px;", onerror="this.remove();"),
     content,
     style="display: flex; align-items: center; gap: 10px;"
   )
