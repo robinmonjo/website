@@ -8,15 +8,16 @@ def TweetListHeader(count, last_synchronized_at):
       Small(
         Fa("info-circle"),
         """
-        I use Twitter/X to stay updated on IT news. It allows me to aggregate every news source I can be interested in (websites and people). To add something to my reading list, I simply like ♥️ the tweet. Don't follow me on X I'm just a consumer
+        I use X to stay updated on IT news. It allows me to aggregate every news source I can be interested in (websites and people). To add something to my reading list, I simply like ♥️ the Tweet. Don't follow me, I'm just a consumer
         """,
         Atb("(@b0baille)", href="https://x.com/b0baille"),
         "😋, but you can find below the tweets I liked."
       )
     ),
-    Small(f"""
-      Synchronized {last_synchronized_at.strftime("%d %b. %Y")} - {count} articles
-    """),
+    Small(
+      f"Last sync. {last_synchronized_at.strftime("%d %b. %Y")} - {count} articles",
+      style="color: grey;"
+    ),
     style="margin-bottom: 10px;"
   )
 
@@ -43,7 +44,7 @@ def Header(tweet):
     Img(src=tweet.user_profile_image_url, width=30, style="border-radius: 30px"),
     Atb(tweet.user_name, href=tweet.user_profile_url(), cls="contrast", style="text-decoration: none;"),
     Small(tweet.created_at_datetime().strftime("%d %b. %Y"), style="color: grey;"),
-    Small(Atb("see tweet", Fa("arrow-up-right-from-square", size="xs"), href=tweet.url()), style="margin-left: auto;"),
+    Small(Atb("see Tweet", Fa("arrow-up-right-from-square", size="xs"), href=tweet.url()), style="margin-left: auto;"),
     style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"
   )
 
