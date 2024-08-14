@@ -46,4 +46,8 @@ class Tweet:
     return datetime.fromisoformat(self.created_at)
 
   def url(self):
-    return f"https://x.com/{self.user_screen_name}/status/{self.id}"
+    return f"{self.user_profile_url()}/status/{self.id}"
+
+  def user_profile_url(self):
+    return f"https://x.com/{self.user_screen_name}"
+
