@@ -9,6 +9,7 @@ from components.tweet_list import TweetList, TweetListHeader
 from agent.agent import Agent
 import tweets.tweets_db as tweets_db
 from asyncio import sleep
+import os
 import time
 import json
 import uuid
@@ -37,7 +38,9 @@ def before(req, session):
 
 bware = Beforeware(before, skip=[r'/favicon\.ico', r'/content/.*', r'.*\.css'])
 
-app,rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=True, before=bware)
+debug = os.getenv("PYTHON_ENV", "development") == "development"
+
+app,rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=debug, before=bware)
 
 @rt("/")
 def get(req):
