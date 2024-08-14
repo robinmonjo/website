@@ -15,28 +15,35 @@ class Tweet:
   thumbnail_url: str
   urls: str
   full_text: str
+  media: str
+  user_profile_image_url: str
+  user_screen_name: str
 
   def parsed_urls(self):
     return json.loads(self.urls)
 
-  def cleaned_text(self):
-    result = self.replace_tracked_url(self.text)
+  def parsed_media(self):
+    return json.loads(self.media)
 
-    if self.user_name == HN_USER: return self.clean_hn_link_to_comments(result)
+  def decomposed_text(self):
+    parts = []
+    i = 0
 
-    return result
-
-  def replace_tracked_url(self, text):
-    new_text = text
     for url in self.parsed_urls():
-      new_text = new_text.replace(url["url"], url["expanded_url"])
+      indices = url["indices"]
 
-    return new_text
+      parts.extend([
+        { "type": "text", "content": self.text[i:indices[0]] },
+        { "type": "url", "display": url["display_url"], "href": url["expanded_url"] }
+      ])
+      i = indices[1]
 
-  def clean_hn_link_to_comments(self, text):
-    urls = self.parsed_urls()
+    parts.append({ "type": "text", "content": self.text[i:len(self.text)] })
 
-    if len(urls) > 1 and urls[-1]["expanded_url"].startswith("https://news.ycombinator.com"):
-      return re.sub(r'\s*\(https?://[^\)]+\)', '', text)
+    return parts
 
-    return text
+  def created_at_datetime(self):
+    return datetime.fromisoformat(self.created_at)
+
+  def url(self):
+    return f"https://x.com/{self.user_screen_name}/status/{self.id}"

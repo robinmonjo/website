@@ -1,4 +1,5 @@
 from fasthtml.common import *
+from components.atb import Atb
 
 def TweetList(tweets, page):
   return  *[Tweet(t) for t in tweets[:-1]], Tweet(tweets[-1], next_page=(page + 1))
@@ -12,7 +13,16 @@ def Tweet(tweet, next_page=None):
       "hx_swap": "afterend"
     }
 
-  return Div(
-    f"{tweet.user_name} - {tweet.cleaned_text()}",
+  elements = []
+  for item in tweet.decomposed_text():
+    if item["type"] == "text":
+      elements.append(Span(item["content"]))
+    else:
+      elements.append(Atb(item["display"], href=item["href"]))
+
+  return Article(
+    P(f"{tweet.user_name} - {tweet.created_at_datetime().strftime("%d %b. %Y")}"),
+    P(*elements, style="word-break: break-all;"),
+    Small(Atb("see tweet", href=tweet.url())),
     **props
   )
