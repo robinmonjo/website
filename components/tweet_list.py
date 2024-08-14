@@ -14,7 +14,7 @@ def Tweet(tweet, next_page=None):
     }
 
   elements = []
-  for item in tweet.decomposed_text():
+  for item in tweet.parsed_text():
     if item["type"] == "text":
       elements.append(Span(item["content"]))
     else:

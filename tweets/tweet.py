@@ -25,7 +25,7 @@ class Tweet:
   def parsed_media(self):
     return json.loads(self.media)
 
-  def decomposed_text(self):
+  def parsed_text(self):
     parts = []
     i = 0
 
