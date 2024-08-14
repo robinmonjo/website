@@ -5,7 +5,6 @@ Style:
 - [ ] hosted on ...
 - [x] report issue
 - [x] see the code
-- [ ] markdown chat bubble
 - [x] scroll to bottom chat
 - [x] check school image in dark mode
 - [x] disable chat while answering
