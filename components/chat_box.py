@@ -117,7 +117,8 @@ def About():
   return Small(
     Fa("info-circle"),
     "Please, be nice 😊. You are talking to a self hosted 3.8B parameters LLM:",
-    Atb("Phi 3 mini.", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
+    Atb("Phi 3 mini", href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct"),
+    "with 4-bit quantized weights. This is not Chat GPT 😋.",
     "Chat sessions are recorded for improvements but 100% anonymous."
   )
 
