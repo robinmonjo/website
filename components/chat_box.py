@@ -8,34 +8,34 @@ import random
 def chat_box_js():
     return """
     window.onload = (event) => {
-      scrollMessagesListDown();
+        scrollMessagesListDown();
 
-      const input = document.getElementById("msg-input");
-      const form = document.getElementById("msg-form");
-      const suggestedQuestions = document.querySelectorAll(".suggested-question");
+        const input = document.getElementById("msg-input");
+        const form = document.getElementById("msg-form");
+        const suggestedQuestions = document.querySelectorAll(".suggested-question");
 
-      suggestedQuestions.forEach((div) => {
-        div.onclick = () => {
-          const text = div.innerText || div.textContent;
-          input.value = text;
-          const event = new Event("submit");
-          form.dispatchEvent(event);
+        suggestedQuestions.forEach((div) => {
+            div.onclick = () => {
+            const text = div.innerText || div.textContent;
+            input.value = text;
+            const event = new Event("submit");
+            form.dispatchEvent(event);
 
-          deleteSuggestedQuestions();
+            deleteSuggestedQuestions();
+            };
+        });
         };
-      });
-    };
 
     const deleteSuggestedQuestions = () => {
-      const div = document.getElementById("suggested-questions");
-      if (div) {
-        div.remove();
-      }
+        const div = document.getElementById("suggested-questions");
+        if (div) {
+            div.remove();
+        }
     };
 
     const scrollMessagesListDown = () => {
-      const div = document.getElementById("messages-list");
-      div.scrollTop = div.scrollHeight;
+        const div = document.getElementById("messages-list");
+        div.scrollTop = div.scrollHeight;
     };
   """
 
@@ -68,11 +68,11 @@ def SuggestedQuestion(q):
     return Div(
         q,
         style=f"""
-    background: rgb(244, 244, 244, 1);
-    cursor: pointer;
-    margin-bottom: 5px;
-    {chat_bubble_style}
-    """,
+            background: rgb(244, 244, 244, 1);
+            cursor: pointer;
+            margin-bottom: 5px;
+            {chat_bubble_style}
+        """,
         cls="suggested-question",
     )
 
@@ -84,14 +84,14 @@ def Messages(messages_list):
         *messages,
         id="messages-list",
         style="""
-      height: fit-content;
-      max-height: 60vh;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 10px;
-    """,
+            height: fit-content;
+            max-height: 60vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+        """,
     )
 
 
@@ -103,9 +103,9 @@ def MessageForm(session_key):
         ws_connect=f"/messages_ws",
         ws_send=True,
         hx_on_htmx_ws_after_message="""
-      scrollMessagesListDown();
-      deleteSuggestedQuestions();
-    """,
+            scrollMessagesListDown();
+            deleteSuggestedQuestions();
+        """,
         id="msg-form",
     )
 
@@ -160,10 +160,10 @@ def UserChatMessage(msg, idx):
             msg,
             id=f"msg-{idx}",
             style=f"""
-        margin-left: auto;
-        background: rgb(244, 244, 244, 1);
-        {chat_bubble_style}
-      """,
+                margin-left: auto;
+                background: rgb(244, 244, 244, 1);
+                {chat_bubble_style}
+            """,
         )
     )
 
@@ -174,9 +174,9 @@ def AssistantChatMessage(msg, idx):
             msg,
             id=f"msg-{idx}",
             style=f"""
-        background: rgb(215, 236, 247, 1);
-        {chat_bubble_style}
-      """,
+                background: rgb(215, 236, 247, 1);
+                {chat_bubble_style}
+            """,
         )
     )
 
