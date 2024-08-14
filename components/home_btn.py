@@ -1,7 +1,7 @@
 from fasthtml.common import *
 from components.fa import Fa
 
-def home_btn(icon, label, href, **kwargs):
+def HomeBtn(icon, label, href, **kwargs):
   return A(
     Fa(icon, style="margin-right: 10px;"),
     label,

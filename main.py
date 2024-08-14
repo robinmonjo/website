@@ -3,7 +3,7 @@ from components.nav_bar import nav_bar
 from components.education_card import EducationCard
 from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
-from components.home_btn import home_btn
+from components.home_btn import HomeBtn
 from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
 from components.tweet_list import TweetList
 from agent.agent import Agent
@@ -48,10 +48,10 @@ def get(req):
       cls="marked",
       style="font-size: 1.5em; text-align: center;"
     ),
-    home_btn("briefcase", "Work Experience", "/resume"),
-    home_btn("school", "Education", "/education"),
-    home_btn("comment", "Ask Phi", "/ask_llm"),
-    home_btn("book", "Reading List", "/reading_list"),
+    HomeBtn("briefcase", "Work Experience", "/resume"),
+    HomeBtn("school", "Education", "/education"),
+    HomeBtn("comment", "Ask Phi", "/ask_llm"),
+    HomeBtn("book", "Reading List", "/reading_list"),
     style="align-items: center; display: flex; flex-direction: column; gap: 20px"
   )
 
