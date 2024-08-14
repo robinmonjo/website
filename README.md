@@ -17,7 +17,7 @@ Content:
 - [ ] Resume: details CA scaling when I took over as a CTO
 - [ ] Write details on CV, important projects etc
 - [ ] Mail to: robinmonjo@gmail.com (later use my domain ?)
-- [ ] Reading list section
+- [x] Reading list section
 - [ ] optimize llm context
 - [x] add datascientest formation
 - [x] ask phi page: sample questions, about the model, be nice ...
@@ -33,5 +33,3 @@ Layout:
 Other:
 - [x] make session expire
 - [x] use 128k context ?
-
-Reading list
