@@ -8,7 +8,7 @@ Style:
 - [x] scroll to bottom chat
 - [x] check school image in dark mode
 - [x] disable chat while answering
-- [ ] random questions when no conversation with phi 3
+- [x] random questions when no conversation with phi 3
 - [ ] mobile navigation
 
 
@@ -20,6 +20,7 @@ Content:
 - [ ] optimize llm context
 - [x] add datascientest formation
 - [x] ask phi page: sample questions, about the model, be nice ...
+- [ ] more suggested questions
 
 Ops:
 - [ ] deployment
