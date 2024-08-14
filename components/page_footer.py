@@ -14,12 +14,12 @@ def PageFooter():
         ),
         "-",
         Atb(
-          "Report an issue",
+          "Report an issue 🐞",
           href="https://github.com/robinmonjo/website/issues"
         ),
         "-",
         Atb(
-          "See code",
+          "Show me the code 🤓",
           href="https://github.com/robinmonjo/website"
         )
       ),
