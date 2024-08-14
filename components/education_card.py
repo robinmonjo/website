@@ -1,7 +1,7 @@
 from fasthtml.common import *
 from components.atb import Atb
 
-def education_card(item):
+def EducationCard(item):
   lines = [
     Span(item["years"], style="margin-right: 10px;"), Strong(f"{item["establishment"]} {item["flag"]}"),
     Br(),

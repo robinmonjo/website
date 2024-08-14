@@ -1,6 +1,6 @@
 from fasthtml.common import *
 from components.nav_bar import nav_bar
-from components.education_card import education_card
+from components.education_card import EducationCard
 from components.favicon_link import favicon_link
 from components.footer import footer
 from components.home_btn import home_btn
@@ -66,7 +66,7 @@ def get(req):
 def get(req):
   with open(f"content/education.json", "r") as f: content = json.load(f)
   return Layout(
-    education_card(item) for item in content
+    EducationCard(item) for item in content
   )
 
 @rt("/ask_llm")
