@@ -2,6 +2,14 @@ from fasthtml.common import *
 from components.atb import Atb
 from components.fa import Fa
 
+def TweetListHeader(count, last_synchronized_at):
+  return Div(
+    Small(f"""
+      Synchronized {last_synchronized_at.strftime("%d %b. %Y")} - {count} articles
+    """),
+    style="text-align: right; margin-bottom: 10px;"
+  )
+
 def TweetList(tweets, page):
   return  *[Tweet(t) for t in tweets[:-1]], Tweet(tweets[-1], next_page=(page + 1))
 
@@ -30,7 +38,7 @@ def Header(tweet):
   )
 
 def Content(tweet):
-  content = P(*ParsedTextElements(tweet), style="word-break: break-all; margin-bottom: 0"),
+  content = P(*ParsedTextElements(tweet), style="word-break: break-all; margin-bottom: 0;"),
   return ContentWithThumbnail(tweet, content) if tweet.thumbnail_url else content
 
 def ContentWithThumbnail(tweet, content):

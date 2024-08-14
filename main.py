@@ -5,9 +5,9 @@ from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
 from components.home_btn import HomeBtn
 from components.chat_box import ChatBox, ChatInput, UserChatMessage, AssistantChatMessage, ChatMessageChunk, ChatBar, chat_box_js
-from components.tweet_list import TweetList
+from components.tweet_list import TweetList, TweetListHeader
 from agent.agent import Agent
-from tweets.tweets import fetch_tweets
+import tweets.tweets_db as tweets_db
 from asyncio import sleep
 import time
 import json
@@ -114,7 +114,7 @@ async def messages_ws(msg:str, session_key:str, send):
 
 @rt("/reading_list")
 def get(page:int=1):
-  tweets = fetch_tweets(page=page)
+  tweets = tweets_db.fetch(page=page)
   if not tweets: return None
 
   if page > 1:
@@ -122,6 +122,7 @@ def get(page:int=1):
     return TweetList(tweets, page)
 
   return Layout(
+    TweetListHeader(tweets_db.count(), tweets_db.last_synchronized_at()),
     TweetList(tweets, page)
   )
 

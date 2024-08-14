@@ -10,6 +10,7 @@ Style:
 - [x] check school image in dark mode
 - [x] disable chat while answering
 - [ ] random questions when no conversation with phi 3
+- [ ] mobile navigation
 
 
 Content:
