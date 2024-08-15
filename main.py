@@ -18,7 +18,7 @@ from components.chat_box import (
     ChatBar,
 )
 from components.tweet_list import TweetList, TweetListHeader
-from agent.agent import Agent
+from llm_agent.agent import Agent
 from tweets import tweets_db
 
 
@@ -40,6 +40,8 @@ def set_session(session):
 
 
 def before(req, session):
+    del req
+
     if not session:
         set_session(session)
     elif time.time() - float(session["ts"]) > SESSION_EXPIRATION_DELAY:

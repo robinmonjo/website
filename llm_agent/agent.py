@@ -1,6 +1,6 @@
 import os.path
 import json
-from agent.llm_singleton import LlmSingleton
+from llm_agent.llm_singleton import LlmSingleton
 
 
 class Agent:
