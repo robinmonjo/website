@@ -4,6 +4,8 @@ import json
 
 HN_USER = "Hacker News 50"
 
+# pylint: disable=too-many-instance-attributes
+
 
 @dataclass
 class Tweet:
