@@ -1,0 +1,12 @@
+[MASTER]
+ignore=.venv
+
+[MESSAGES CONTROL]
+# disable
+# - unused-wildcard-impor and wildcard-import: it is "the way to go" for fasthtml
+# - undefined-variable: H1, Li and standard components are undefined
+# - invalid-name: components are not snake-case
+disable=missing-docstring,missing-function-docstring,unused-wildcard-import,undefined-variable,wildcard-import,invalid-name
+
+[FILE_REGEX:main.py]
+disable=function-redefined

@@ -1,3 +1,8 @@
+from asyncio import sleep
+import os
+import time
+import json
+import uuid
 from fasthtml.common import *
 from components.nav_bar import NavBar
 from components.education_card import EducationCard
@@ -14,12 +19,8 @@ from components.chat_box import (
 )
 from components.tweet_list import TweetList, TweetListHeader
 from agent.agent import Agent
-import tweets.tweets_db as tweets_db
-from asyncio import sleep
-import os
-import time
-import json
-import uuid
+from tweets import tweets_db
+
 
 hdrs = (
     MarkdownJS(),
@@ -77,7 +78,7 @@ def get(req):
 
 @rt("/education")
 def get(req):
-    with open(f"content/education.json", "r") as f:
+    with open("content/education.json", "r", encoding="utf-8") as f:
         content = json.load(f)
     return Layout(*[EducationCard(item) for item in content], current_path=req.url.path)
 
@@ -121,7 +122,7 @@ async def messages_ws(msg: str, session_key: str, send):
         if "content" in delta:
             await send(
                 ChatMessageChunk(
-                    delta["content"], next_message_idx, clear=(content == "")
+                    delta["content"], next_message_idx, clear_existing=(content == "")
                 )
             )
             await sleep(0)  # flush the event loop ?? seems weird
@@ -166,7 +167,7 @@ def Layout(*args, **kwargs):
 
 
 def read_md(file):
-    with open(f"content/{file}.md", "r") as f:
+    with open(f"content/{file}.md", "r", encoding="utf-8") as f:
         content = f.read()
     return content
 

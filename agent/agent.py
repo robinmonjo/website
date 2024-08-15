@@ -39,7 +39,7 @@ class Agent:
 
     def load_messages(self):
         if self.session_exists():
-            with open(self.session_file, "r") as f:
+            with open(self.session_file, "r", encoding="utf-8") as f:
                 return json.load(f)
 
         return []

@@ -28,9 +28,9 @@ def fetch(page=1, per_page=50):
 def count():
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
-    count = cursor.execute("SELECT COUNT(*) FROM tweets").fetchone()[0]
+    result = cursor.execute("SELECT COUNT(*) FROM tweets").fetchone()[0]
     conn.close()
-    return count
+    return result
 
 
 def last_synchronized_at():

@@ -1,7 +1,8 @@
-from llama_cpp import Llama
-from agent.context import context
 import threading
 import os.path
+from llama_cpp import Llama
+from agent.context import context
+
 
 MODEL = "Phi-3.1-mini-128k-instruct-Q4_K_M.gguf"
 

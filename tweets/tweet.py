@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
 import json
-import re
 
 HN_USER = "Hacker News 50"
 

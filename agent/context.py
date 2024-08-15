@@ -1,7 +1,7 @@
 def context():
-    with open("content/resume.md") as f:
+    with open("content/resume.md", "r", encoding="utf-8") as f:
         resume = f.read()
-    with open("content/education.json") as f:
+    with open("content/education.json", "r", encoding="utf-8") as f:
         education = f.read()
 
     return f"""
