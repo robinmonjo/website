@@ -20,6 +20,11 @@ build/
 
 # Ignore Docker-related files
 Dockerfile
+.dockerignore
+
+# Ignore git files
+.git/
+.gitignore
 
 # Ignore IDE or editor-specific files
 .vscode/
@@ -35,3 +40,5 @@ Thumbs.db
 nbs/
 
 .sesskey
+.pylintrc
+README.md
