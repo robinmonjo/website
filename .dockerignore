@@ -1,0 +1,37 @@
+# Ignore the virtual environment directory
+.venv/
+
+# Ignore Python cache files
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+
+# Ignore logs
+*.log
+
+# Ignore the .env file
+.env
+
+# Ignore compiled files and directories
+*.egg-info/
+dist/
+build/
+
+# Ignore Docker-related files
+Dockerfile
+
+# Ignore IDE or editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Jupyter notebook
+.ipynb_checkpoints
+nbs/
+
+.sesskey
