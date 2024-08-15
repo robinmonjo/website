@@ -1,5 +1,5 @@
 import threading
-import os.path
+import os
 from llama_cpp import Llama
 from agent.context import context
 
@@ -26,7 +26,7 @@ class LlmSingleton:
         self.model = Llama(
             model_path=os.path.join("models", MODEL),
             n_ctx=131072,  # 128 KB
-            verbose=False,
+            verbose=os.getenv("LLAMA_VERBOSE", "false") == "true",
             use_mlock=True,
         )
 
