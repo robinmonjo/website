@@ -1,8 +1,8 @@
+import json
+import random
 from fasthtml.common import *
 from components.fa import Fa
 from components.atb import Atb
-import json
-import random
 
 
 def chat_box_js():
@@ -54,7 +54,7 @@ def SuggestedQuestions(messages_list):
     if messages_list:
         return None
 
-    with open(f"content/suggested_questions.json", "r") as f:
+    with open("content/suggested_questions.json", "r", encoding="utf-8") as f:
         questions = random.sample(json.load(f), 2)
 
     return Div(
@@ -64,9 +64,9 @@ def SuggestedQuestions(messages_list):
     )
 
 
-def SuggestedQuestion(q):
+def SuggestedQuestion(question):
     return Div(
-        q,
+        question,
         style=f"""
             background: rgb(244, 244, 244, 1);
             cursor: pointer;
@@ -100,7 +100,7 @@ def MessageForm(session_key):
         ChatBar(),
         Input(type="hidden", name="session_key", value=session_key),
         hx_ext="ws",
-        ws_connect=f"/messages_ws",
+        ws_connect="/messages_ws",
         ws_send=True,
         hx_on_htmx_ws_after_message="""
             scrollMessagesListDown();
@@ -181,8 +181,8 @@ def AssistantChatMessage(msg, idx):
     )
 
 
-def ChatMessageChunk(chunk, idx, clear=False):
-    oob = f"innerHTML:#msg-{idx}" if clear else f"beforeend:#msg-{idx}"
+def ChatMessageChunk(chunk, idx, clear_existing=False):
+    oob = f"innerHTML:#msg-{idx}" if clear_existing else f"beforeend:#msg-{idx}"
     return Span(chunk, hx_swap_oob=oob)
 
 

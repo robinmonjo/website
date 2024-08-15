@@ -22,7 +22,7 @@ def NavBar(current_path="/"):
             Ul(Li(A(Title("Robin Monjo"), href="/", style="text-decoration: none;"))),
             Ul(
                 *[
-                    Li(Link(label, href=path, focused=(path == current_path)))
+                    Li(NavBarLink(label, href=path, focused=path == current_path))
                     for (label, path) in MENU_ITEMS
                 ],
                 Li("|", style="color: lightgrey"),
@@ -33,7 +33,7 @@ def NavBar(current_path="/"):
     )
 
 
-def Link(label, focused=False, **kwargs):
+def NavBarLink(label, focused=False, **kwargs):
     style = "font-size: 1.25em;"
     if focused:
         style += " text-decoration: underline;"

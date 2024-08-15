@@ -1,6 +1,6 @@
+from datetime import datetime
 from fasthtml.common import *
 from components.atb import Atb
-from datetime import datetime
 
 
 def PageFooter():
