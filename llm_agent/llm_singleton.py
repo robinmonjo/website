@@ -6,6 +6,8 @@ from llm_agent.context import context
 
 MODEL = "Phi-3.1-mini-128k-instruct-Q4_K_M.gguf"
 
+# pylint: disable=attribute-defined-outside-init
+
 
 class LlmSingleton:
     _instance = None
