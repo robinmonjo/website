@@ -51,9 +51,9 @@ def before(req, session):
 
 bware = Beforeware(before, skip=[r"/favicon\.ico", r"/content/.*", r".*\.css"])
 
-debug = os.getenv("PYTHON_ENV", "development") == "development"
+dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
-app, rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=debug, before=bware)
+app, rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=dev_env, live=dev_env, before=bware)
 
 
 @rt("/")
