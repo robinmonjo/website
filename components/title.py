@@ -1,6 +1,6 @@
 from fasthtml.common import *
 
-style = """
+STYLE = """
 me {
   background: linear-gradient(
     to right,
@@ -28,5 +28,6 @@ me {
 }
 """
 
+
 def Title(text):
-    return H1(text, Style(style))
+    return H1(text, Style(STYLE))
