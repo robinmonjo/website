@@ -7,24 +7,20 @@ from components.atb import Atb
 
 def chat_box_js():
     return """
-    window.onload = (event) => {
-        scrollMessagesListDown();
+    const input = document.getElementById("msg-input");
+    const form = document.getElementById("msg-form");
+    const suggestedQuestions = document.querySelectorAll(".suggested-question");
 
-        const input = document.getElementById("msg-input");
-        const form = document.getElementById("msg-form");
-        const suggestedQuestions = document.querySelectorAll(".suggested-question");
-
-        suggestedQuestions.forEach((div) => {
-            div.onclick = () => {
+    suggestedQuestions.forEach((div) => {
+        div.onclick = () => {
             const text = div.innerText || div.textContent;
             input.value = text;
             const event = new Event("submit");
             form.dispatchEvent(event);
 
             deleteSuggestedQuestions();
-            };
-        });
         };
+    });
 
     const deleteSuggestedQuestions = () => {
         const div = document.getElementById("suggested-questions");
@@ -37,16 +33,18 @@ def chat_box_js():
         const div = document.getElementById("messages-list");
         div.scrollTop = div.scrollHeight;
     };
+
+    scrollMessagesListDown();
   """
 
 
 def ChatBox(messages_list, session_key):
     return (
-        Script(chat_box_js()),
         SuggestedQuestions(messages_list),
         Messages(messages_list),
         MessageForm(session_key),
         About(),
+        Script(chat_box_js())
     )
 
 
