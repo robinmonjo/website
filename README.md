@@ -2,7 +2,6 @@ TODOs:
 
 Style:
 - [ ] catch phrase police change + gradients also on important words ? Bigger font anyway
-- [ ] hosted on ...
 - [x] report issue
 - [x] see the code
 - [x] scroll to bottom chat
@@ -21,6 +20,7 @@ Content:
 - [x] add datascientest formation
 - [x] ask phi page: sample questions, about the model, be nice ...
 - [ ] more suggested questions
+- [ ] hosted on ...
 
 Ops:
 - [ ] deployment
