@@ -26,6 +26,7 @@ Ops:
 - [ ] deployment
 - [ ] analytics
 - [ ] prevent spamming on llm ?
+- [ ] use phi 3.5
 
 Layout:
 - [x] home page catch phrase with 3 buttons: Work XP, Education, Ask Phi + link in the top bar
@@ -33,3 +34,4 @@ Layout:
 Other:
 - [x] make session expire
 - [x] use 128k context ?
+- [x] reset session

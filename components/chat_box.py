@@ -44,7 +44,7 @@ def ChatBox(messages_list, session_key):
         Messages(messages_list),
         MessageForm(session_key),
         About(),
-        Script(chat_box_js())
+        Script(chat_box_js()),
     )
 
 
@@ -194,4 +194,9 @@ def About():
         ),
         "with 4-bit quantized weights. This is not Chat GPT 😋.",
         "Chat sessions are recorded for improvements but 100% anonymous.",
+        ResetSessionBtn(),
     )
+
+
+def ResetSessionBtn():
+    return A("Reset my session", href="/ask_llm?reset=true")

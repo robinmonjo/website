@@ -39,14 +39,18 @@ def set_session(session):
     session.setdefault("ts", str(time.time()))
 
 
+def reset_session(session):
+    session.clear()
+    set_session(session)
+
+
 def before(req, session):
     del req
 
     if not session:
         set_session(session)
     elif time.time() - float(session["ts"]) > SESSION_EXPIRATION_DELAY:
-        session.clear()
-        set_session(session)
+        reset_session(session)
 
 
 bware = Beforeware(before, skip=[r"/favicon\.ico", r"/content/.*", r".*\.css"])
@@ -86,7 +90,11 @@ def get(req):
 
 
 @rt("/ask_llm")
-def get(session, req):
+def get(session, req, reset: bool = False):
+    if reset:
+        reset_session(session)
+        return RedirectResponse(url="/ask_llm")
+
     messages = Agent(session["key"]).messages
     return Layout(ChatBox(messages, session["key"]), current_path=req.url.path)
 
