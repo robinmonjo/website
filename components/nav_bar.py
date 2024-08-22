@@ -43,6 +43,7 @@ def MenuItemsLinks(*, current_path):
         for (label, path) in MENU_ITEMS
     ]
 
+
 def MobileMenuItemsLinks():
     return [Li(A(label, href=path)) for (label, path) in MENU_ITEMS]
 
