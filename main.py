@@ -4,7 +4,7 @@ import time
 import json
 import uuid
 from fasthtml.common import *
-from components.nav_bar import NavBar
+from components.nav_bar import NavBar, MobileNavBar
 from components.education_card import EducationCard
 from components.favicon_link import FaviconLink
 from components.page_footer import PageFooter
@@ -170,7 +170,7 @@ def Layout(*args, **kwargs):
     current_path = kwargs.pop("current_path")
     return (
         Title("R. Monjo"),
-        NavBar(current_path=current_path),
+        MobileNavBar(current_path=current_path),
         Main(Div(*args, **kwargs), cls="container"),
         PageFooter(),
     )
