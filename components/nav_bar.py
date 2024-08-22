@@ -28,10 +28,7 @@ def NavBar(current_path="/"):
 
 def MobileNavBar(current_path="/"):
     return Header(
-        Nav(
-            SiteIcon(),
-            Ul(Li(MobileLinks(current_path=current_path)))
-        ),
+        Nav(SiteIcon(), MobileLinks(current_path=current_path)),
         cls="container",
     )
 
@@ -39,11 +36,13 @@ def MobileNavBar(current_path="/"):
 def SiteIcon():
     return Ul(Li(A(Title("Robin Monjo"), href="/", style="text-decoration: none;")))
 
+
 def MenuItemsLinks(*, current_path):
     return [
         Li(NavBarLink(label, href=path, focused=path == current_path))
         for (label, path) in MENU_ITEMS
     ]
+
 
 def BrandItemsLinks():
     return [Li(BrandLink(label, url)) for (label, url) in BRAND_ITEMS]
@@ -63,6 +62,7 @@ def DesktopLinks(*, current_path):
         *BrandItemsLinks()
     )
 
+
 def MobileLinks(*, current_path):
     label = "..."
     current_item = next((item for item in MENU_ITEMS if item[1] == current_path), None)
@@ -73,11 +73,7 @@ def MobileLinks(*, current_path):
         Li(
             Details(
                 Summary(label),
-                Ul(
-                    *MenuItemsLinks(current_path=None),
-                    *BrandItemsLinks(),
-                    dir="rtl"
-                ),
+                Ul(*MenuItemsLinks(current_path=None), *BrandItemsLinks(), dir="rtl"),
                 cls="dropdown",
             )
         )
