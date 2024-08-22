@@ -17,19 +17,48 @@ BRAND_ITEMS = [
 
 
 def NavBar(current_path="/"):
+    return (
+        DesktopNavBar(current_path=current_path, id="desktop-nav"),
+        MobileNavBar(current_path=current_path, id="mobile-nav"),
+        Style("""
+            /* Base state: Hide both menus initially */
+            #desktop-nav, #mobile-nav {
+                display: none;
+            }
+
+            /* Display the desktop menu on larger screens */
+            @media screen and (min-width: 769px) {
+                #desktop-nav {
+                    display: block;
+                }
+            }
+
+            /* Display the mobile menu on smaller screens */
+            @media screen and (max-width: 768px) {
+                #mobile-nav {
+                    display: block;
+                }
+            }
+        """)
+    )
+
+
+def DesktopNavBar(current_path="/", **kwargs):
     return Header(
         Nav(
             SiteIcon(),
             DesktopLinks(current_path=current_path),
         ),
         cls="container",
+        **kwargs
     )
 
 
-def MobileNavBar(current_path="/"):
+def MobileNavBar(current_path="/", **kwargs):
     return Header(
         Nav(SiteIcon(), MobileLinks(current_path=current_path)),
         cls="container",
+        **kwargs
     )
 
 
