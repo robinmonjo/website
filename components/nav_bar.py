@@ -64,7 +64,7 @@ def DesktopLinks(*, current_path):
 
 
 def MobileLinks(*, current_path):
-    label = "..."
+    label = "Home"
     current_item = next((item for item in MENU_ITEMS if item[1] == current_path), None)
     if current_item:
         label = current_item[0]
