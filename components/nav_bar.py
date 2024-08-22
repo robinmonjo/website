@@ -43,6 +43,9 @@ def MenuItemsLinks(*, current_path):
         for (label, path) in MENU_ITEMS
     ]
 
+def MobileMenuItemsLinks():
+    return [Li(A(label, href=path)) for (label, path) in MENU_ITEMS]
+
 
 def BrandItemsLinks():
     return [Li(BrandLink(label, url)) for (label, url) in BRAND_ITEMS]
@@ -73,7 +76,7 @@ def MobileLinks(*, current_path):
         Li(
             Details(
                 Summary(label),
-                Ul(*MenuItemsLinks(current_path=None), *BrandItemsLinks(), dir="rtl"),
+                Ul(*MobileMenuItemsLinks(), *BrandItemsLinks(), dir="rtl"),
                 cls="dropdown",
             )
         )
