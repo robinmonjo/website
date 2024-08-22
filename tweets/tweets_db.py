@@ -12,7 +12,7 @@ def fetch(page=1, per_page=50):
     cursor = conn.cursor()
 
     offset = (page - 1) * per_page
-    query = f"SELECT * FROM tweets LIMIT {per_page} OFFSET {offset}"
+    query = f"SELECT * FROM tweets ORDER BY created_at DESC LIMIT {per_page} OFFSET {offset}"
 
     cursor.execute(query)
 
