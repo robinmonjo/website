@@ -26,7 +26,7 @@ hdrs = (
     MarkdownJS(),
     HighlightJS(langs=[]),
     Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous"),
-    Style(".container { max-width: 800px; }"),
+    Style("@media (min-width: 1024px) { .container { max-width: 800px; } }"),
     Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
     FaviconLink("👋"),
 )
