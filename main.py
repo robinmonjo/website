@@ -189,4 +189,4 @@ def read_md(file):
     return content
 
 
-serve()
+serve(reload=dev_env)

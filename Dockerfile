@@ -10,5 +10,6 @@ RUN pip install --upgrade pip && pip install -r requirements/prod.txt
 
 ENV PYTHON_ENV="production"
 ENV PORT=80
+ENV WEB_CONCURRENCY=4
 
 CMD ["python", "main.py"]
