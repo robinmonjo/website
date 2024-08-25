@@ -20,7 +20,8 @@ def NavBar(current_path="/"):
     return Header(
         DesktopNavBar(current_path=current_path, id="desktop-nav"),
         MobileNavBar(current_path=current_path, id="mobile-nav"),
-        Style("""
+        Style(
+            """
             /* Base state: Hide both menus initially */
             #desktop-nav, #mobile-nav {
                 display: none;
@@ -39,17 +40,14 @@ def NavBar(current_path="/"):
                     display: flex;
                 }
             }
-        """),
+        """
+        ),
         cls="container",
     )
 
 
 def DesktopNavBar(current_path="/", **kwargs):
-    return Nav(
-            SiteIcon(),
-            DesktopLinks(current_path=current_path),
-            **kwargs
-        )
+    return Nav(SiteIcon(), DesktopLinks(current_path=current_path), **kwargs)
 
 
 def MobileNavBar(current_path="/", **kwargs):
