@@ -58,17 +58,6 @@ def SiteIcon():
     return Ul(Li(A(Title("Robin Monjo"), href="/", style="text-decoration: none;")))
 
 
-def MenuItemsLinks(*, current_path):
-    return [
-        Li(NavBarLink(label, href=path, focused=path == current_path))
-        for (label, path) in MENU_ITEMS
-    ]
-
-
-def MobileMenuItemsLinks():
-    return [Li(A(label, href=path)) for (label, path) in MENU_ITEMS]
-
-
 def BrandItemsLinks():
     return [Li(BrandLink(label, url)) for (label, url) in BRAND_ITEMS]
 
@@ -82,7 +71,10 @@ def NavBarLink(label, focused=False, **kwargs):
 
 def DesktopLinks(*, current_path):
     return Ul(
-        *MenuItemsLinks(current_path=current_path),
+        *[
+            Li(NavBarLink(label, href=path, focused=path == current_path))
+            for (label, path) in MENU_ITEMS
+        ],
         Li("|", style="color: lightgrey"),
         *BrandItemsLinks()
     )
@@ -98,7 +90,11 @@ def MobileLinks(*, current_path):
         Li(
             Details(
                 Summary(label),
-                Ul(*MobileMenuItemsLinks(), *BrandItemsLinks(), dir="rtl"),
+                Ul(
+                    *[Li(A(label, href=path)) for (label, path) in MENU_ITEMS],
+                    *BrandItemsLinks(),
+                    dir="rtl"
+                ),
                 cls="dropdown",
             )
         )
