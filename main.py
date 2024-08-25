@@ -26,7 +26,7 @@ hdrs = (
     MarkdownJS(),
     HighlightJS(langs=[]),
     Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous"),
-    Style(".container { max-width: 800px; }"),
+    Style("@media (min-width: 1024px) { .container { max-width: 800px; } }"),
     Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
     FaviconLink("👋"),
 )
@@ -57,7 +57,14 @@ bware = Beforeware(before, skip=[r"/favicon\.ico", r"/content/.*", r".*\.css"])
 
 dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
-app, rt = fast_app(hdrs=hdrs, ws_hdr=True, debug=dev_env, live=dev_env, before=bware, htmlkw={ "lang": "en" })
+app, rt = fast_app(
+    hdrs=hdrs,
+    ws_hdr=True,
+    debug=dev_env,
+    live=dev_env,
+    before=bware,
+    htmlkw={"lang": "en"},
+)
 
 
 @rt("/")
