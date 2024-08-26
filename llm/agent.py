@@ -1,32 +1,21 @@
 import os.path
 import json
-from llm_agent.llm_singleton import LlmSingleton
+from llm.client import Client
 
 
 class Agent:
     def __init__(self, session_key):
         self.session_file = os.path.join("chat_sessions", f"chat_{session_key}.json")
         self.messages = self.load_messages()
-        self.llm = LlmSingleton()
-
-    def model_warmed_up(self):
-        return self.llm.model_warmed_up
+        self.client = Client()
 
     def streamed_answer(self, question):
         self.append_question(question)
-        return self.llm.chat_completion(self.messages, stream=True)
+        return self.client.chat_completion(self.messages, stream=True)
 
     def save_answer(self, content):
         self.append_answer(content)
         self.save_messages()
-        self.llm.model_warmed_up = True
-
-    def answer(self, question):
-        self.append_question(question)
-        answer = self.llm.chat_completion(self.messages)
-        content = answer["choices"][0]["message"]["content"]
-        self.save_answer(content)
-        return content
 
     def append_question(self, q):
         self.messages.append({"role": "user", "content": q})

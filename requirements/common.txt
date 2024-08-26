@@ -1,2 +1,4 @@
 python-fasthtml
 llama-cpp-python==0.2.87
+llama-cpp-python[server]
+openai

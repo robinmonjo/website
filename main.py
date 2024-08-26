@@ -18,7 +18,7 @@ from components.chat_box import (
     ChatBar,
 )
 from components.tweet_list import TweetList, TweetListHeader
-from llm_agent.agent import Agent
+from llm.agent import Agent
 from tweets import tweets_db
 
 
@@ -112,7 +112,6 @@ async def messages_ws(msg: str, session_key: str, send):
     await send(ChatBar(enabled=False))
 
     agent = Agent(session_key)
-    output = agent.streamed_answer(msg)
     messages_len = agent.messages_len()
 
     # return user message directly
@@ -124,26 +123,21 @@ async def messages_ws(msg: str, session_key: str, send):
     next_message_idx = messages_len + 1
 
     # send an empty message from the agent
-    waiting_message = (
-        "🤔..."
-        if agent.model_warmed_up()
-        else "Please wait, I'm waking up 🥱. Will answer in a few seconds..."
-    )
-    await send(AssistantChatMessage(waiting_message, next_message_idx))
-
+    await send(AssistantChatMessage("🤔...", next_message_idx))
     await sleep(0.0)  # flush the event loop ?? seems weird
+
+    output = agent.streamed_answer(msg)
 
     content = ""
     for chunk in output:
-        delta = chunk["choices"][0]["delta"]
-        if "content" in delta:
-            await send(
-                ChatMessageChunk(
-                    delta["content"], next_message_idx, clear_existing=(content == "")
-                )
+        delta_content = chunk.choices[0].delta.content or ""
+        await send(
+            ChatMessageChunk(
+                delta_content, next_message_idx, clear_existing=(content == "")
             )
-            await sleep(0)  # flush the event loop ?? seems weird
-            content += delta["content"]
+        )
+        await sleep(0)  # flush the event loop ?? seems weird
+        content += delta_content
 
     agent.save_answer(content)
 
