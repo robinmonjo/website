@@ -4,7 +4,7 @@ from llama_cpp import Llama
 from llm_agent.context import context
 
 
-MODEL = "Phi-3.1-mini-128k-instruct-Q4_K_M.gguf"
+MODEL = "Phi-3.1-mini-4k-instruct-Q4_K_M.gguf"
 
 # pylint: disable=attribute-defined-outside-init
 
@@ -27,7 +27,7 @@ class LlmSingleton:
 
         self.model = Llama(
             model_path=os.path.join("models", MODEL),
-            n_ctx=131072,  # 128 KB
+            n_ctx=4096,  # 131072,  # 128 KB
             verbose=os.getenv("LLAMA_VERBOSE", "false") == "true",
             use_mlock=True,
         )
@@ -41,3 +41,6 @@ class LlmSingleton:
         if not stream:
             self.model_warmed_up = True  # if stream it returns directly
         return result
+
+    def tokenize(self, txt):
+        return self.model.tokenize(txt.encode("utf-8"))
