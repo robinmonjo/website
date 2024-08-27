@@ -1,3 +1,2 @@
 python-fasthtml
-llama-cpp-python[server]
 openai

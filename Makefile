@@ -10,14 +10,12 @@ push:
 prod-run:
 	docker run -d --restart unless-stopped -p 80:80 --ulimit memlock=-1:-1 website
 
-remote-build: export DOCKER_HOST=ssh://root@[2a01:4f8:1c1b:b920::1]
+SERVER_IP := 2a01:4f9:c012:eab9::1
+
+remote-build: export DOCKER_HOST=ssh://root@[${SERVER_IP}]
 remote-build: build
 
 MODEL := Phi-3.1-mini-4k-instruct-Q4_K_M.gguf
-
-serve-llm:
-	python -m llama_cpp.server --model=models/${MODEL} --n_ctx=4096
-
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
@@ -26,5 +24,5 @@ else ifeq ($(UNAME), Darwin)
 	LLAMA_SERVER = llm/llama-server-macos
 endif
 
-serve-llm2:
+serve-llm:
 	./$(LLAMA_SERVER) -m models/${MODEL} --host 0.0.0.0 --port 8000 -cnv --mlock --log-disable
