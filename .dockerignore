@@ -42,5 +42,6 @@ nbs/
 .sesskey
 .pylintrc
 README.md
+.cache
 
 models/Phi-3.1-mini-128k-instruct-Q4_K_M.gguf
