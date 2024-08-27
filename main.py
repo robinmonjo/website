@@ -38,7 +38,7 @@ if not dev_env:
     tracking = Script(
         defer=True,
         src="https://cloud.umami.is/script.js",
-        data_website_id="113dad6d-07fb-424f-8a41-a14b5f4af46d"
+        data_website_id="113dad6d-07fb-424f-8a41-a14b5f4af46d",
     )
     hdrs = hdrs + (tracking,)
 
