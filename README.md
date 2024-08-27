@@ -25,13 +25,15 @@ Ops:
 - [x] analytics => https://umami.is/docs/faq
 - [ ] certificate
 - [ ] VPS hardening: https://becomesovran.com/blog/server-setup-basics.html
-- [ ] prevent spamming on llm ?
-- [ ] use phi 3.5
 
 Layout:
 - [x] home page catch phrase with 3 buttons: Work XP, Education, Ask Phi + link in the top bar
 
 Other:
 - [x] make session expire
-- [ ] use 128k context ? => requires 16Gb
 - [x] reset session
+
+Later
+- [ ] use 128k context ? => requires 16Gb
+- [ ] prevent spamming on llm ?
+- [ ] use phi 3.5
