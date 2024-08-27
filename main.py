@@ -17,6 +17,7 @@ from components.chat_box import (
     ChatMessageChunk,
     ChatBar,
 )
+from components.home_text import HomeText
 from components.tweet_list import TweetList, TweetListHeader
 from llm.agent import Agent
 from tweets import tweets_db
@@ -70,16 +71,19 @@ app, rt = fast_app(
 @rt("/")
 def get(req):
     return Layout(
-        Div(
-            read_md("catch_phrase"),
-            cls="marked",
-            style="font-size: 1.5em; text-align: center;",
+        HomeText(
+            Div(
+                read_md("catch_phrase"),
+                cls="marked",
+            ),
         ),
-        HomeBtn("briefcase", "Work Experience", "/resume"),
-        HomeBtn("school", "Education", "/education"),
-        HomeBtn("comment", "Ask Phi", "/ask_llm"),
-        HomeBtn("book", "Reading List", "/reading_list"),
-        style="align-items: center; display: flex; flex-direction: column; gap: 20px",
+        Div(
+            HomeBtn("briefcase", "Work Experience", "/resume"),
+            HomeBtn("school", "Education", "/education"),
+            HomeBtn("comment", "Ask Phi", "/ask_llm"),
+            HomeBtn("book", "Reading List", "/reading_list"),
+            style="display: flex; justify-content: center; gap: 30px; margin-top: 60px;",
+        ),
         current_path=req.url.path,
     )
 

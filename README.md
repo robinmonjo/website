@@ -1,7 +1,7 @@
 TODOs:
 
 Style:
-- [ ] catch phrase police change + gradients also on important words ? Bigger font anyway
+- [x] catch phrase police change + gradients also on important words ? Bigger font anyway
 - [x] report issue
 - [x] see the code
 - [x] scroll to bottom chat
@@ -23,7 +23,7 @@ Content:
 - [ ] hosted on ...
 
 Ops:
-- [ ] deployment => ok first try ! It's fucking slow on a CX32 (load time is bad then, prompting is acceptable). 128k is way too big, 4k seems ok |> cpx31 is ok after first load. Maybe a mechanism to tell when the server is "hot" would be nice ?
+- [ ] deployment => Hetzner CPX32
 - [ ] analytics
 - [ ] prevent spamming on llm ?
 - [ ] use phi 3.5
@@ -33,5 +33,5 @@ Layout:
 
 Other:
 - [x] make session expire
-- [x] use 128k context ?
+- [ ] use 128k context ? => requires 16Gb
 - [x] reset session

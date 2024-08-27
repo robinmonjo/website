@@ -1,33 +1,33 @@
 from fasthtml.common import *
+from components.css_gradients import random_gradient
 
-STYLE = """
-me {
-  background: linear-gradient(
-    to right,
-    #7953cd 20%,
-    #00affa 30%,
-    #0190cd 70%,
-    #764ada 80%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
-  margin-bottom: 0;
-}
-
-@keyframes textShine {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
+ANIMATION = """
+    @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
 """
 
 
+def style(gradient):
+    return f"""
+        me {{
+            {gradient}
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textShine 5s ease-in-out infinite alternate;
+            margin-bottom: 0;
+        }}
+        {ANIMATION}
+    """
+
+
 def Title(text):
-    return H1(text, Style(STYLE))
+    return H1(text, Style(style(random_gradient())))
