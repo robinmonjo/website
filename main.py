@@ -73,10 +73,10 @@ def get(req):
     return Layout(
         HomeText(
             Img(
-                src=f"/content/profile_pictures/picture1.jpeg",
+                src="/content/profile_pictures/picture1.jpeg",
                 alt="profile picture",
                 width="130",
-                style="border-radius: 130px; margin-bottom: 20px;"
+                style="border-radius: 130px; margin-bottom: 20px;",
             ),
             Div(
                 read_md("catch_phrase"),
