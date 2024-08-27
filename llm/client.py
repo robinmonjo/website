@@ -17,5 +17,5 @@ class Client:
             model="unused",
             messages=messages,
             stream=stream,
-            extra_body={"cache_prompt": True}
+            extra_body={"cache_prompt": True},
         )
