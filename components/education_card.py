@@ -21,7 +21,7 @@ def EducationCard(item):
 
     return Article(
         Atb(
-            Img(src=f"/content/{item["logo"]}"),
+            Img(src=f"/content/{item["logo"]}", alt=item["establishment"]),
             href=item["website"],
             style="width: 80px; margin-right: 20px;",
         ),
