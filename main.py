@@ -97,7 +97,19 @@ def get(req):
             HomeBtn("school", "Education", "/education"),
             HomeBtn("comment", "Ask Phi", "/ask_llm"),
             HomeBtn("book", "Reading List", "/reading_list"),
-            style="display: flex; justify-content: center; gap: 30px; margin-top: 60px;",
+            Style("""
+                #home-btns {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-top: 60px;
+
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                    }
+                }
+            """),
+            id="home-btns",
         ),
         current_path=req.url.path,
     )
