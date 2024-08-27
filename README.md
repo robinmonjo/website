@@ -22,7 +22,7 @@ Content:
 
 Ops:
 - [ ] deployment => Hetzner CPX32
-- [ ] analytics => https://umami.is/docs/faq
+- [x] analytics => https://umami.is/docs/faq
 - [ ] certificate
 - [ ] VPS hardening: https://becomesovran.com/blog/server-setup-basics.html
 - [ ] prevent spamming on llm ?
