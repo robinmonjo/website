@@ -22,6 +22,7 @@ from components.tweet_list import TweetList, TweetListHeader
 from llm.agent import Agent
 from tweets import tweets_db
 
+dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
 hdrs = (
     MarkdownJS(),
@@ -31,6 +32,16 @@ hdrs = (
     Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
     FaviconLink("👋"),
 )
+
+if not dev_env:
+    # https://cloud.umami.is/
+    tracking = Script(
+        defer=True,
+        src="https://cloud.umami.is/script.js",
+        data_website_id="113dad6d-07fb-424f-8a41-a14b5f4af46d"
+    )
+    hdrs = hdrs + (tracking,)
+
 
 SESSION_EXPIRATION_DELAY = 2 * 60 * 60  # 2 hours
 
@@ -55,8 +66,6 @@ def before(req, session):
 
 
 bware = Beforeware(before, skip=[r"/favicon\.ico", r"/content/.*", r".*\.css"])
-
-dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
 app, rt = fast_app(
     hdrs=hdrs,
