@@ -187,12 +187,12 @@ def ChatMessageChunk(chunk, idx, clear_existing=False):
 def About():
     return Small(
         Fa("info-circle"),
-        "Please, be nice 😊. You are talking to a self hosted 3.8B parameters LLM:",
+        "Please, be indulgent 😊. You are talking to a self hosted 3.8B parameters LLM:",
         Atb(
-            "Phi 3 mini",
+            "Phi 3.1 mini",
             href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct",
         ),
-        "with 4-bit quantized weights. This is not Chat GPT 😋.",
+        "with 4-bit quantized weights, on a 15€ VPS. This is not Chat GPT 😋.",
         "Chat sessions are recorded for improvements but 100% anonymous.",
         ResetSessionBtn(),
     )
