@@ -1,19 +1,15 @@
 lint:
 	black . && pylint --recursive=y .
 
+SERVER_IP := 2a01:4f9:c012:eab9::1
+
+export DOCKER_HOST=ssh://root@[${SERVER_IP}]
+
 build:
 	docker build --network=host -t website:latest .
 
-push:
-	docker tag website:latest robinmonjo/website:latest && docker push robinmonjo/website:latest
-
-prod-run:
+run:
 	docker run -d --restart unless-stopped -p 80:80 --ulimit memlock=-1:-1 website
-
-SERVER_IP := 2a01:4f9:c012:eab9::1
-
-remote-build: export DOCKER_HOST=ssh://root@[${SERVER_IP}]
-remote-build: build
 
 MODEL := Phi-3.1-mini-4k-instruct-Q4_K_M.gguf
 UNAME := $(shell uname -s)
