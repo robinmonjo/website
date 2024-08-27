@@ -1,7 +1,7 @@
-## Working experience
+### Working experience
 
-#### CTO
-2022 - July 2024 at Eventmaker / Infopro Digital
+#### CTO at Eventmaker x Infopro Digital
+**2022 to July 2024**
 - Management of 3 teams: developers, P.O., design (with middle management ~12 people)
 - Lead developer (web, mobile, infrastructure)
 - Post acquisition integration
@@ -23,8 +23,8 @@ Marketing materials: https://www.eventmaker.com/en/features/virtual-event/
 
 ---
 
-#### CTO Associate
-2018 - 2021 at Eventmaker
+#### CTO and Shareholder at Eventmaker
+**2018 - 2021**
 - Lead developer (web, mobile, infrastructure)
 - Management of a team of 6 web developers and one designer
 - Entrepreneurship
@@ -49,8 +49,8 @@ White Labelled SSO ...
 
 ---
 
-#### Software Engineer
-2013 - 2018 at Eventmaker
+#### Software Engineer at Eventmaker
+**2013 - 2018**
 - Web development Ruby on Rails
 - Lead mobile developer (iOS / Android), management of an apprentice
 - Leader on the Infrastructure, migration from an home made PaaS to Kubernetes
@@ -116,7 +116,7 @@ The goal of my training period was to finish the first part of the tool, so I pr
 
 ---
 
-## Early life
+### Early life
 
 High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, [see fis-ski.com profile](https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics).
 
