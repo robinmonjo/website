@@ -97,7 +97,8 @@ def get(req):
             HomeBtn("school", "Education", "/education"),
             HomeBtn("comment", "Ask Phi", "/ask_llm"),
             HomeBtn("book", "Reading List", "/reading_list"),
-            Style("""
+            Style(
+                """
                 #home-btns {
                     display: flex;
                     justify-content: center;
@@ -108,7 +109,8 @@ def get(req):
                         flex-direction: column;
                     }
                 }
-            """),
+            """
+            ),
             id="home-btns",
         ),
         current_path=req.url.path,
