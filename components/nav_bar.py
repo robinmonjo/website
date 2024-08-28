@@ -3,7 +3,7 @@ from components.brand_link import BrandLink
 from components.title import Title
 
 MENU_ITEMS = [
-    ("Work", "/resume"),
+    ("Resume", "/resume"),
     ("Education", "/education"),
     ("Ask Phi", "/ask_llm"),
     ("Reading List", "/reading_list"),

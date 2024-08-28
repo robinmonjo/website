@@ -126,3 +126,11 @@ The goal of my training period was to finish the first part of the tool, so I pr
 High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank">see fis-ski.com profile</a>.
 
 Ski instructor, teaching alpine skiing to French and English-speaking clients
+
+---
+
+### Interests
+
+- **Sports:** Practicing skiing, running, cycling and hiking. Following: tennis, soccer, cycling and more.
+- **Theoretical Physics:** Hobbyist with a keen interest in general relativity and quantum physics.
+- **Computer Science:** Naturally passionate about the field 😋.
