@@ -25,7 +25,7 @@ class Client:
 
     def tokenize(self, text):
         data = {"content": text}
-        response = requests.post(f"{SERVER_URL}/tokenize", json=data)
+        response = requests.post(f"{SERVER_URL}/tokenize", json=data, timeout=10)
         return response.json()["tokens"]
 
     def initial_prompt_size(self):
