@@ -12,7 +12,7 @@
 **Technical Contributions & Methodology Leadership**
 
 - Maintained a hands-on role in web development, infrastructure management, and mobile development, ensuring high standards of quality and innovation.
-- Continued to spearhead the adoption and implementation of the Shape Up methodology, driving efficient and focused product development cycles.
+- Continued to spearhead the implementation of the Shape Up methodology, driving efficient and focused product development cycles.
 
 
 ---
@@ -60,11 +60,11 @@
 **Web Developer**
 
 - Contributed to the development of the company's main SaaS product as part of the web development team.
-Worked with a range of technologies including Ruby on Rails, Node.js, Express, React.js, Redux, and MongoDB to build and enhance features.
+- Worked with a range of technologies, including Ruby on Rails, Node.js, Express, React.js, Redux, and MongoDB to build and enhance features.
 
 **Infrastructure Lead**
 
-- responsible for maintaining and improving the company's homegrown Platform as a Service (PaaS), ensuring the reliability and scalability of Eventmaker SaaS products in collaboration with the CTO.
+- responsible for maintaining and improving the company's homegrown Platform as a Service (PaaS), ensuring the reliability and scalability of Eventmaker's SaaS products in collaboration with the CTO.
 - Led the migration from a custom-built PaaS to a Kubernetes-based PaaS, resulting in:
   - A significant reduction in time spent on infrastructure maintenance.
   - Enhanced robustness and scalability of the infrastructure.
@@ -72,7 +72,7 @@ Worked with a range of technologies including Ruby on Rails, Node.js, Express, R
 
 **Lead Mobile Developer**
 
-- Served as the lead mobile developer, developing and maintaining the company’s mobile applications (iOS and Android).
+- Served as the lead mobile developer, responsible for developing and maintaining the company's mobile applications (iOS and Android).
 - Managed and mentored an apprentice for three years, guiding them in mobile development best practices and project management.
 
 
