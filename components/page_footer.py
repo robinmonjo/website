@@ -10,7 +10,7 @@ def PageFooter():
             Small(
                 "Built with",
                 Atb(
-                    Img(src="/content/fasthtml_logo.svg", alt="FastHTML", width="60"),
+                    Img(src="/content/fasthtml_logo.svg", alt="FastHTML", width="60", height="20"),
                     href="https://www.fastht.ml/",
                     style="text-decoration: none;",
                 ),

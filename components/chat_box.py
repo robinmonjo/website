@@ -116,7 +116,7 @@ def ChatBar(enabled=True):
         Button(
             button_label,
             aria_busy=("true" if not enabled else "false"),
-            aria_label=("Please wait" if not enabled else ""),
+            aria_label=("Please wait" if not enabled else "Send message"),
         ),
         id="chat-bar",
         disabled=(not enabled),
