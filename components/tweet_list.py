@@ -9,10 +9,10 @@ def TweetListHeader(count, last_synchronized_at):
             Small(
                 Fa("info-circle"),
                 """
-        I use X to stay updated on IT news. It allows me to aggregate every news source I can be interested in (websites and people). To add something to my reading list, I simply like ♥️ the Tweet. Don't follow me, I'm just a consumer
+        I use X to stay updated on IT news. It allows me to aggregate all the news sources I'm interested in, including websites and people. To add something to my reading list, I simply like ♥️ the tweet. Don't follow me, I'm just a consumer
         """,
                 Atb("(@b0baille)", href="https://x.com/b0baille"),
-                "😋, but you can find below the Tweets I liked.",
+                "😋, but you can find the tweets I've liked below.",
             )
         ),
         Small(

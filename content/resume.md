@@ -1,6 +1,7 @@
 ### Working experience
 
 #### Chief Technology Officer (CTO) at Eventmaker (acquired by Infopro Digital) - 2022 to July 2024
+📍 Paris, 🧑‍💻 between ~40 and ~55 employees, 📈 grew to €5 million in annual revenue
 
 **Leadership & Team Management**
 
@@ -17,6 +18,7 @@
 ---
 
 #### Chief Technology Officer (CTO) & Shareholder at Eventmaker - 2018 to 2022
+📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 grew to €4 million in annual revenue
 
 **Leadership & Strategic Direction**
 
@@ -53,6 +55,7 @@
 ---
 
 #### Software Engineer at Eventmaker - 2013 to 2018
+📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 2€ million in annual revenue
 
 **Web Developer**
 
@@ -77,7 +80,7 @@ Worked with a range of technologies including Ruby on Rails, Node.js, Express, R
 
 ### Internships
 
-#### Integration of LXC in a PaaS - 6 months in 2013 at Applidget (ex Eventmaker)
+#### Integration of LXC in a PaaS - Paris - 6 months in 2013 at Applidget (ex Eventmaker)
 Keywords: `chroot`, `LXC`, `PaaS`, `IaaS`, `SaaS`, `cloud`, `Heroku`, `git`, `AWS`, `vagrant-up`, `Nodejs`, `Ruby`, `Rails`, `Go`, `virtualisation`, `container`, `isolation`, `buildpacks`, `Linux`, `Bash`, `Mongodb`, `Redis`, `AuFS`, `HTTP`, `REST`, `SSH`, `Upstart`, `Docker`, `High availability`, `portability`
 
 <details>
@@ -89,7 +92,7 @@ The isolation of running applications used in production within a Platform as a 
 
 ---
 
-#### iOS/Android developer - 3 months in 2012 at Applidget (ex Eventmaker)
+#### iOS/Android developer - Paris - 3 months in 2012 at Applidget (ex Eventmaker)
 Keywords: `iOS`, `Objective-C`, `xCode`, `ARC`, `java`, `Android`, `Android Studio`, `HTTP`, `API`
 
 <details>
@@ -102,7 +105,7 @@ Keywords: `iOS`, `Objective-C`, `xCode`, `ARC`, `java`, `Android`, `Android Stud
 
 ---
 
-#### Java Developer CS laboratory Grenoble - 3 months in 2009
+#### Java Developer CS laboratory - Grenoble - 3 months in 2009
 Keywords: `information system`, `swing`, `MVC`, `eclipse`, `UML`, `model`, `meta-model`, `patterns`, `graph`, `process engineering`
 
 <details>
@@ -122,3 +125,4 @@ The goal of my training period was to finish the first part of the tool, so I pr
 
 High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank">see fis-ski.com profile</a>.
 
+Ski instructor, teaching alpine skiing to French and English-speaking clients
