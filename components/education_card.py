@@ -10,7 +10,7 @@ def EducationCard(item):
         item["diploma"],
     ]
     if "notes" in item:
-        lines.extend([Br(), Em(item["notes"], style="color: grey;")])
+        lines.extend([Br(), Em(item["notes"], style="color: #777;")])
     if "courses" in item:
         courses = Details(
             Summary("View courses"),
