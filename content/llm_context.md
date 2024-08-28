@@ -75,10 +75,18 @@ Overview: Integrated Linux Containers (LXC) into a PaaS to enhance security and 
 - Theoretical Physics: Interest in general relativity and quantum physics.
 - Computer Science: Passionate about the field.
 
-## Extra information:
+# Information only you know about Robin:
+
+## General
 - Born 9 June 1988, 36 years old
 - Leaves in Paris
 - From Tignes
+
+## Known programming languages:
+- Go: multiple open source project on Robin's github
+- Elixir: see Robin's github
+- Python: the website you run on is built in python using the FastHTML framework from answer.ai
+- Others: Javascript, Typescript, Ruby, Java, Swift, Objective-C and more
 
 ---
 
