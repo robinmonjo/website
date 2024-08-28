@@ -26,7 +26,11 @@ dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
 hdrs = (
     MarkdownJS(),
-    Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous", defer=True),
+    Script(
+        src="https://kit.fontawesome.com/e68e45d4cb.js",
+        crossorigin="anonymous",
+        defer=True,
+    ),
     Style("@media (min-width: 1024px) { .container { max-width: 800px; } }"),
     Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
     FaviconLink("👋"),
@@ -113,7 +117,7 @@ def get(req):
             id="home-btns",
         ),
         current_path=req.url.path,
-        description="Home of Robin Monjo website"
+        description="Home of Robin Monjo website",
     )
 
 
@@ -123,7 +127,7 @@ def get(req):
         read_md("resume"),
         cls="marked",
         current_path=req.url.path,
-        description="Robin Monjo Resume"
+        description="Robin Monjo Resume",
     )
 
 
@@ -134,7 +138,7 @@ def get(req):
     return Layout(
         *[EducationCard(item) for item in content],
         current_path=req.url.path,
-        description="Robin Monjo education"
+        description="Robin Monjo education",
     )
 
 
@@ -148,7 +152,7 @@ def get(session, req, reset: bool = False):
     return Layout(
         ChatBox(messages, session["key"]),
         current_path=req.url.path,
-        description="Robin Monjo website LLM assistant"
+        description="Robin Monjo website LLM assistant",
     )
 
 
@@ -205,7 +209,7 @@ def get(req, page: int = 1):
         TweetListHeader(tweets_db.count(), tweets_db.last_synchronized_at()),
         TweetList(tweets, page),
         current_path=req.url.path,
-        description="Robin Monjo reading list"
+        description="Robin Monjo reading list",
     )
 
 
