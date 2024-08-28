@@ -12,13 +12,13 @@ Style:
 
 
 Content:
-- [ ] Resume: details CA scaling when I took over as a CTO
-- [ ] Write details on CV, important projects etc
+- [ ] Resume: details CA scaling when I took over as a CTO => Waiting for Tristan answer
+- [ ] Write details on CV, important projects etc => mostly done, proof read tomorrow
 - [x] Reading list section
-- [ ] optimize llm context
+- [x] optimize llm context
 - [x] add datascientest formation
 - [x] ask phi page: sample questions, about the model, be nice ...
-- [ ] more suggested questions
+- [x] more suggested questions
 - [ ] proof reading (just resume missing)
 
 Ops:

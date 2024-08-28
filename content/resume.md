@@ -7,12 +7,12 @@
 
 - Member of the executive committee post-acquisition, contributing to strategic decision-making within the company.
 - Management of three teams: engineering, Product Owners and design (with middle management, ~12 people)
-- Contributed to the integration of outsourced collaborators from Poland to expand the engineering capacity in both mobile and web development.
+- Integration of outsourced collaborators from Poland to expand the engineering capacity in both mobile and web development.
 
 **Technical Contributions & Methodology Leadership**
 
 - Maintained a hands-on role in web development, infrastructure management, and mobile development, ensuring high standards of quality and innovation.
-- Continued to spearhead the implementation of the Shape Up methodology, driving efficient and focused product development cycles.
+- Continued to spearhead the implementation of the <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">Shape Up methodology</a>, driving efficient and focused product development cycles.
 
 
 ---
@@ -41,7 +41,7 @@
 
 **Product Management & Methodology Implementation**
 
-- Played a pivotal role in product management by maturing the adoption of the Shape Up methodology across the company.
+- Played a pivotal role in product management by maturing the adoption of the <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">Shape Up methodology</a> across the company.
 - Authored and presented numerous pitches, guiding the product development process and ensuring alignment with business goals.
 
 
@@ -123,7 +123,7 @@ The goal of my training period was to finish the first part of the tool, so I pr
 
 ### Early Life
 
-High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank">see fis-ski.com profile</a>.
+High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank" rel="noopener noreferrer">see fis-ski.com profile</a>.
 
 Ski instructor, teaching alpine skiing to French and English-speaking clients
 
