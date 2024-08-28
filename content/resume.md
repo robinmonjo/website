@@ -1,6 +1,6 @@
 ### Work Experience
 
-#### Chief Technology Officer (CTO) at Eventmaker (acquired by Infopro Digital) - 2022 to July 2024
+#### Chief Technology Officer (CTO) at <a href="https://www.eventmaker.com/en" target="_blank" rel="noopener noreferrer">Eventmaker</a> (acquired by <a href="https://www.infopro-digital.com/" target="_blank" rel="noopener noreferrer">Infopro Digital</a>) - 2022 to July 2024
 📍 Paris, 🧑‍💻 between ~40 and ~55 employees, 📈 grew to €5 million in annual revenue
 
 **Leadership & Team Management**
@@ -22,7 +22,7 @@
 
 **Leadership & Strategic Direction**
 
-- Appointed as CTO following the departure of the former CTO; joined the executive committee and became a shareholder, contributing to the strategic direction and growth of the company.
+- Appointed as CTO following the departure of the former CTO; joined the executive committee and became a shareholder, contributing to the strategic direction and growth of the company. <a href="https://medium.eventmaker.io/robin-monjo-devient-le-nouveau-cto-deventmaker-io-82338eacbaf8" target="_blank" rel="noopener noreferrer">Read the announcement (in French)</a>.
 - Led the engineering team, overseeing all aspects of software development, infrastructure, and product innovation.
 - Collaborated with emerging teams, including a newly formed design team and introduced middle management in the engineering team.
 
@@ -42,13 +42,13 @@
 
 **Product Management & Methodology Implementation**
 
-- Played a pivotal role in product management by maturing the adoption of the <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">Shape Up methodology</a> across the company.
+- Played a pivotal role in product management by maturing the adoption of the Shape Up methodology across the company.
 - Authored and presented numerous <a href="https://basecamp.com/shapeup/1.5-chapter-06" target="_blank" rel="noopener noreferrer">pitches</a>, guiding the product development process and ensuring alignment with business goals.
 
 
 **Technical Innovation & COVID-19 Response**
 
-- Led the rapid development and implementation of virtual event capabilities on the company's platform in response to the COVID-19 pandemic, adding to the company offer virtual events.
+- Led the rapid development and implementation of virtual event capabilities on the company's platform in response to the COVID-19 pandemic, adding to the company offer <a href="https://www.eventmaker.com/en/features/virtual-event/" target="_blank" rel="noopener noreferrer">virtual events</a>.
 - Achieved a significant competitive advantage by becoming the first event tech platform to support virtual events, resulting in substantial customer growth and market traction.
 - Played a pivotal role in driving the company’s recovery and success during the pandemic, directly contributing to the acquisition by a larger group.
 
