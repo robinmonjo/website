@@ -19,6 +19,7 @@ Content:
 - [x] add datascientest formation
 - [x] ask phi page: sample questions, about the model, be nice ...
 - [ ] more suggested questions
+- [ ] proof reading
 
 Ops:
 - [ ] deployment => Hetzner CPX32

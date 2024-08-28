@@ -1,80 +1,81 @@
 ### Working experience
 
-#### CTO at Eventmaker x Infopro Digital
-**2022 to July 2024**
-- Management of 3 teams: developers, P.O., design (with middle management ~12 people)
-- Lead developer (web, mobile, infrastructure)
-- Post acquisition integration
-- Outsourcing collaboration (poland)
+#### Chief Technology Officer (CTO) at Eventmaker (acquired by Infopro Digital) - 2022 to July 2024
 
-<details>
-<summary>See a few projects I have been working on...</summary>
+**Leadership & Team Management**
 
-**Multi-database**
+- Member of the executive committee post-acquisition, contributing to strategic decision-making within the company.
+- Management of three teams: engineering, Product Owners and design (with middle management, ~12 people)
+- Contributed to the integration of outsourced collaborators from Poland to expand the engineering capacity in both mobile and web development.
 
-Streaming, WebRTC, React, Frontend dev, HLS, RTMP, AWS Media Live, Live chats ...
-Marketing materials: https://www.eventmaker.com/en/features/virtual-event/
+**Technical Contributions & Methodology Leadership**
 
-</details>
-
----
-
-⚡️ Eventmaker got acquired by Infopro Digital
-
----
-
-#### CTO and Shareholder at Eventmaker
-**2018 - 2021**
-- Lead developer (web, mobile, infrastructure)
-- Management of a team of 6 web developers and one designer
-- Entrepreneurship
-- Product development organization (shape up methodology)
-
-<details>
-<summary>See a few projects I have been working on...</summary>
-
-**Virtual event transition**
-
-Streaming, WebRTC, React, Frontend dev, HLS, RTMP, AWS Media Live, Live chats ...
-
-**Eventmaker white labeled SSO**
-
-White Labelled SSO ...
-
-</details>
-
----
-
-⚡️ Departure from the co-founding CTO
-
----
-
-#### Software Engineer at Eventmaker
-**2013 - 2018**
-- Web development Ruby on Rails
-- Lead mobile developer (iOS / Android), management of an apprentice
-- Leader on the Infrastructure, migration from an home made PaaS to Kubernetes
-
-<details>
-<summary>See a few projects I have been working on...</summary>
-
-**Migration from home made PaaS to Kubernetes**
-
-I lead the full adoption of Kubernetes at Eventmaker to migrate away from a home made PaaS that was difficult to maintain. The project resulted in:
-- a much lower time spent on infrastructure work
-- more robust and scalable infrastructure
-- later, allowed us to benefit from the Kubernetes ecosystem
-
-**Eventmaker Check-in app**
-
-Lead developer on Eventmaker check-in app with strong requirements
-
-</details>
+- Maintained a hands-on role in web development, infrastructure management, and mobile development, ensuring high standards of quality and innovation.
+- Continued to spearhead the adoption and implementation of the Shape Up methodology, driving efficient and focused product development cycles.
 
 
 ---
 
-## Internships
+#### Chief Technology Officer (CTO) & Shareholder at Eventmaker - 2018 to 2022
+
+**Leadership & Strategic Direction**
+
+- Appointed as CTO following the departure of the former CTO; joined the executive committee and became a shareholder, contributing to the strategic direction and growth of the company.
+- Led the developer team, overseeing all aspects of software development, infrastructure, and product innovation.
+- Collaborated with emerging teams, including a newly formed design team and introduced middle management in the engineering team.
+
+**Product Development & Engineering**
+
+- Continued to actively contribute to the development of the company's main SaaS product.
+- Led the mobile development efforts, focusing on maintaining and optimizing the company’s mature mobile applications, with periodic feature updates to meet evolving customer needs.
+
+**Infrastructure Management**
+
+- Maintained overall responsibility for the company’s infrastructure (Kubernetes, AWS), ensuring reliability, scalability, and cost-effectiveness.
+- Continued to enhance the infrastructure
+  - leveraging AWS services to optimize performance (from manual Kubernnetes installation to EKS)
+  - switching from a manual MongoDB Replica Set installation to MongoDB Atlas
+- Minimized operational overhead, enabling the team to focus on delivering greater value to customers and driving business growth.
+
+**Product Management & Methodology Implementation**
+
+- Played a pivotal role in product management by maturing the adoption of the Shape Up methodology across the company.
+- Authored and presented numerous pitches, guiding the product development process and ensuring alignment with business goals.
+
+
+**Technical Innovation & COVID-19 Response**
+
+- Led the rapid development and implementation of virtual event capabilities on the company's platform in response to the COVID-19 pandemic, adding to the company offer virtual events.
+- Achieved a significant competitive advantage by becoming the first event tech platform to support virtual events, resulting in substantial customer growth and market traction.
+- Played a pivotal role in driving the company’s recovery and success during the pandemic, directly contributing to the acquisition by a larger group.
+
+
+---
+
+#### Software Engineer at Eventmaker - 2013 to 2018
+
+**Web Developer**
+
+- Contributed to the development of the company's main SaaS product as part of the web development team.
+Worked with a range of technologies including Ruby on Rails, Node.js, Express, React.js, Redux, and MongoDB to build and enhance features.
+
+**Infrastructure Lead**
+
+- responsible for maintaining and improving the company's homegrown Platform as a Service (PaaS), ensuring the reliability and scalability of Eventmaker SaaS products in collaboration with the CTO.
+- Led the migration from a custom-built PaaS to a Kubernetes-based PaaS, resulting in:
+  - A significant reduction in time spent on infrastructure maintenance.
+  - Enhanced robustness and scalability of the infrastructure.
+  - Adoption of Kubernetes ecosystem tools and best practices, enabling further product innovations and efficiency.
+
+**Lead Mobile Developer**
+
+- Served as the lead mobile developer, developing and maintaining the company’s mobile applications (iOS and Android).
+- Managed and mentored an apprentice for three years, guiding them in mobile development best practices and project management.
+
+
+---
+
+### Internships
 
 #### Integration of LXC in a PaaS - 6 months in 2013 at Applidget (ex Eventmaker)
 Keywords: `chroot`, `LXC`, `PaaS`, `IaaS`, `SaaS`, `cloud`, `Heroku`, `git`, `AWS`, `vagrant-up`, `Nodejs`, `Ruby`, `Rails`, `Go`, `virtualisation`, `container`, `isolation`, `buildpacks`, `Linux`, `Bash`, `Mongodb`, `Redis`, `AuFS`, `HTTP`, `REST`, `SSH`, `Upstart`, `Docker`, `High availability`, `portability`
@@ -83,24 +84,25 @@ Keywords: `chroot`, `LXC`, `PaaS`, `IaaS`, `SaaS`, `cloud`, `Heroku`, `git`, `AW
 <summary>Details</summary>
 The isolation of running applications used in production within a Platform as a Service (PaaS), is essential for two reasons: security and footprint control of processes over a system. Operating system level isolation allows a complete control of resources whether they are software or hardware. However, cloud-computing context doesn’t encourage the use of virtualisation, due to its cost in term of performance and budget. Linux containers (LXC) provide a lightweight and fast alternative to classic virtualisation.
 
-[Download full report (pdf, in French)](/content/internship_report2.pdf)
+<a href="/content/internship_report2.pdf" target="_blank">Download full report (pdf, in French)</a>
 </details>
 
 ---
 
 #### iOS/Android developer - 3 months in 2012 at Applidget (ex Eventmaker)
-Keywords: `iOS`, `Objective-C`, `xCode`, `ARC`, `java`, `Android`, `Android Studio`
+Keywords: `iOS`, `Objective-C`, `xCode`, `ARC`, `java`, `Android`, `Android Studio`, `HTTP`, `API`
 
 <details>
 <summary>Details</summary>
-Mobile app development:
-- Mobicheck-in which is today still in use at Eventmaker
-- Apps for customers
+
+- Developed and maintained mobile applications for iOS (Objective-C) and Android (Java), contributing to both existing projects and new applications (including the <a href="https://apps.apple.com/fr/app/eventmaker-check-in/id670271696" target="_blank">Check-in App</a> of Eventmaker).
+- Gained expertise in modern development tools and practices, including version control with Git and collaborative workflows using GitHub.
+- Applied best practices in software development, ensuring high code quality, scalability, and maintainability of mobile applications.
 </details>
 
 ---
 
-#### Java Developer CS laboratory Grenoble - 3 months - 2009
+#### Java Developer CS laboratory Grenoble - 3 months in 2009
 Keywords: `information system`, `swing`, `MVC`, `eclipse`, `UML`, `model`, `meta-model`, `patterns`, `graph`, `process engineering`
 
 <details>
@@ -111,12 +113,12 @@ At the beginning of my training period, I studied the method and the specificati
 Then, I analysed different tools and technologies that could be useful for the implementation. After the requirements analysis period, I started to program with the Java language and the integrated development environment Eclipse.
 The goal of my training period was to finish the first part of the tool, so I produced a significant documentation for the next developers including the technical and functional description of the tool.
 
-[Download full report (pdf, in French)](/content/internship_report1.pdf)
+<a href="/content/internship_report1.pdf" target="_blank">Download full report (pdf, in French)</a>
 </details>
 
 ---
 
 ### Early life
 
-High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, [see fis-ski.com profile](https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics).
+High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank">see fis-ski.com profile</a>.
 
