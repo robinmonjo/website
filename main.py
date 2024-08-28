@@ -26,7 +26,7 @@ dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
 hdrs = (
     MarkdownJS(),
-    Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous"),
+    Script(src="https://kit.fontawesome.com/e68e45d4cb.js", crossorigin="anonymous", defer=True),
     Style("@media (min-width: 1024px) { .container { max-width: 800px; } }"),
     Style("body { min-height: 100vh; display: flex; flex-direction: column; }"),
     FaviconLink("👋"),
@@ -113,19 +113,29 @@ def get(req):
             id="home-btns",
         ),
         current_path=req.url.path,
+        description="Home of Robin Monjo website"
     )
 
 
 @rt("/resume")
 def get(req):
-    return Layout(read_md("resume"), cls="marked", current_path=req.url.path)
+    return Layout(
+        read_md("resume"),
+        cls="marked",
+        current_path=req.url.path,
+        description="Robin Monjo Resume"
+    )
 
 
 @rt("/education")
 def get(req):
     with open("content/education.json", "r", encoding="utf-8") as f:
         content = json.load(f)
-    return Layout(*[EducationCard(item) for item in content], current_path=req.url.path)
+    return Layout(
+        *[EducationCard(item) for item in content],
+        current_path=req.url.path,
+        description="Robin Monjo education"
+    )
 
 
 @rt("/ask_llm")
@@ -135,7 +145,11 @@ def get(session, req, reset: bool = False):
         return RedirectResponse(url="/ask_llm")
 
     messages = Agent(session["key"]).messages
-    return Layout(ChatBox(messages, session["key"]), current_path=req.url.path)
+    return Layout(
+        ChatBox(messages, session["key"]),
+        current_path=req.url.path,
+        description="Robin Monjo website LLM assistant"
+    )
 
 
 @app.ws("/messages_ws")
@@ -191,6 +205,7 @@ def get(req, page: int = 1):
         TweetListHeader(tweets_db.count(), tweets_db.last_synchronized_at()),
         TweetList(tweets, page),
         current_path=req.url.path,
+        description="Robin Monjo reading list"
     )
 
 
@@ -201,11 +216,13 @@ async def get(fname: str):
 
 def Layout(*args, **kwargs):
     current_path = kwargs.pop("current_path")
+    description = kwargs.pop("description", "")
     return (
         Title("R. Monjo"),
         NavBar(current_path=current_path),
         Main(Div(*args, **kwargs), cls="container"),
         PageFooter(),
+        Meta(name="description", content=description),
     )
 
 
