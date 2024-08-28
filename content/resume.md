@@ -17,32 +17,33 @@
 
 ---
 
-#### Chief Technology Officer (CTO) & Shareholder at Eventmaker - 2018 to 2022
+#### CTO & Shareholder at Eventmaker - 2018 to 2022
 📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 grew to €4 million in annual revenue
 
 **Leadership & Strategic Direction**
 
 - Appointed as CTO following the departure of the former CTO; joined the executive committee and became a shareholder, contributing to the strategic direction and growth of the company.
-- Led the developer team, overseeing all aspects of software development, infrastructure, and product innovation.
+- Led the engineering team, overseeing all aspects of software development, infrastructure, and product innovation.
 - Collaborated with emerging teams, including a newly formed design team and introduced middle management in the engineering team.
 
 **Product Development & Engineering**
 
-- Continued to actively contribute to the development of the company's main SaaS product.
+- Continued to actively contribute to the development of the company's main Software as a Service (SaaS) product.
 - Led the mobile development efforts, focusing on maintaining and optimizing the company’s mature mobile applications, with periodic feature updates to meet evolving customer needs.
 
 **Infrastructure Management**
 
 - Maintained overall responsibility for the company’s infrastructure (Kubernetes, AWS), ensuring reliability, scalability, and cost-effectiveness.
 - Continued to enhance the infrastructure
-  - leveraging AWS services to optimize performance (from manual Kubernnetes installation to EKS)
+  - leveraging AWS services to optimize performance (from manual Kubernnetes installation to EKS, AWS managed Kubernetes service)
   - switching from a manual MongoDB Replica Set installation to MongoDB Atlas
+  - adopting infrastructure as code with Terraform
 - Minimized operational overhead, enabling the team to focus on delivering greater value to customers and driving business growth.
 
 **Product Management & Methodology Implementation**
 
 - Played a pivotal role in product management by maturing the adoption of the <a href="https://basecamp.com/shapeup" target="_blank" rel="noopener noreferrer">Shape Up methodology</a> across the company.
-- Authored and presented numerous pitches, guiding the product development process and ensuring alignment with business goals.
+- Authored and presented numerous <a href="https://basecamp.com/shapeup/1.5-chapter-06" target="_blank" rel="noopener noreferrer">pitches</a>, guiding the product development process and ensuring alignment with business goals.
 
 
 **Technical Innovation & COVID-19 Response**
