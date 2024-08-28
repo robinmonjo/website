@@ -1,4 +1,4 @@
-### Working experience
+### Work Experience
 
 #### Chief Technology Officer (CTO) at Eventmaker (acquired by Infopro Digital) - 2022 to July 2024
 📍 Paris, 🧑‍💻 between ~40 and ~55 employees, 📈 grew to €5 million in annual revenue
@@ -121,7 +121,7 @@ The goal of my training period was to finish the first part of the tool, so I pr
 
 ---
 
-### Early life
+### Early Life
 
 High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank">see fis-ski.com profile</a>.
 
