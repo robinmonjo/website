@@ -12,8 +12,8 @@ Style:
 
 
 Content:
-- [ ] Resume: details CA scaling when I took over as a CTO => Waiting for Tristan answer
-- [ ] Write details on CV, important projects etc => mostly done, proof read tomorrow
+- [x] Resume: details CA scaling when I took over as a CTO => Waiting for Tristan answer
+- [x] Write details on CV, important projects etc => mostly done, proof read tomorrow
 - [x] Reading list section
 - [x] optimize llm context
 - [x] add datascientest formation

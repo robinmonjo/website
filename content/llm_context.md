@@ -66,6 +66,14 @@ Overview: Developed and maintained iOS (Objective-C) and Android (Java) applicat
 Keywords: LXC, PaaS, IaaS, SaaS, cloud, Heroku, Git, AWS, Vagrant, Node.js, Ruby, Rails, Go, virtualization, container, Linux, Bash, MongoDB, Redis, Docker, high availability, portability
 Overview: Integrated Linux Containers (LXC) into a PaaS to enhance security and resource control. Focused on lightweight, cost-effective alternatives to traditional virtualization, ensuring high availability and portability in cloud environments.
 
+## Personal Projects:
+- Coincoin: Blockchain-based cryptocurrency proof-of-concept developed in Elixir.
+- Linux Container Projects (in Go):
+  - Krgo: Docker Hub alternative without Docker.
+  - sc-redis: Self-contained Redis server.
+  - Dock: Micro init system for Linux containers.
+- More Projects on GitHub.
+
 ## Early life:
 - Alpine Skiing: High-level athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes.
 - Ski Instructor: Taught alpine skiing to both French and English-speaking clients.

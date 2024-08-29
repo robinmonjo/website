@@ -122,6 +122,17 @@ The goal of my training period was to finish the first part of the tool, so I pr
 
 ---
 
+### Personal Projects
+
+- **<a href="https://github.com/robinmonjo/coincoin" target="_blank" rel="noopener noreferrer">Coincoin**</a>: a blockchain-based cryptocurrency proof-of-concept built in Elixir.
+- **Linux Container related projects**: as Docker gained popularity, I explored Linux containers through several projects using Go, including::
+  - <a href="https://github.com/robinmonjo/krgo" target="_blank" rel="noopener noreferrer">Krgo</a>: Docker Hub without Docker.
+  - <a href="https://github.com/robinmonjo/sc-redis" target="_blank" rel="noopener noreferrer">sc-redis</a>: Self contained Redis server.
+  - <a href="https://github.com/robinmonjo/dock" target="_blank" rel="noopener noreferrer">Dock</a>: Micro init system for linux containers.
+- Others: check out my <a href="https://github.com/robinmonjo/" target="_blank" rel="noopener noreferrer">Github account</a> for more projects.
+
+---
+
 ### Early Life
 
 High-level alpine skiing ⛷️ athlete, member of the Regional Ski Committee of Savoie and the Sport Club of Tignes, <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=AL&competitorid=97904&type=statistics" target="_blank" rel="noopener noreferrer">see fis-ski.com profile</a>.
