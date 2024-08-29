@@ -1,7 +1,7 @@
 lint:
 	black . && pylint --recursive=y .
 
-SERVER_IP := 2a01:4f9:c012:eab9::1
+SERVER_IP := 2a01:4f8:1c1c:8d49::1
 
 export DOCKER_HOST=ssh://root@[${SERVER_IP}]
 
@@ -9,7 +9,7 @@ build:
 	docker build --network=host -t website:latest .
 
 run:
-	docker run -d --restart unless-stopped -p 80:80 --ulimit memlock=-1:-1 website
+	docker run -d --restart unless-stopped -p 8080:80 --ulimit memlock=-1:-1 website
 
 MODEL := Phi-3.1-mini-4k-instruct-Q4_K_M.gguf
 UNAME := $(shell uname -s)
