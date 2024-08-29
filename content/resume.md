@@ -1,7 +1,7 @@
 ### Work Experience
 
 #### Chief Technology Officer (CTO) at <a href="https://www.eventmaker.com/en" target="_blank" rel="noopener noreferrer">Eventmaker</a> (acquired by <a href="https://www.infopro-digital.com/" target="_blank" rel="noopener noreferrer">Infopro Digital</a>) - 2022 to July 2024
-📍 Paris, 🧑‍💻 between ~40 and ~55 employees, 📈 grew to €5 million in annual revenue
+📍 Paris, 🧑‍💻 between ~40 and ~55 employees, 📈 grew to €6 million in annual revenue
 
 **Leadership & Team Management**
 
@@ -18,7 +18,7 @@
 ---
 
 #### CTO & Shareholder at Eventmaker - 2018 to 2022
-📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 grew to €4 million in annual revenue
+📍 Paris, 🧑‍💻 grew from ~15 to ~40 employees, 📈 grew to €4+ million in annual revenue
 
 **Leadership & Strategic Direction**
 
@@ -56,7 +56,7 @@
 ---
 
 #### Software Engineer at Eventmaker - 2013 to 2018
-📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 2€ million in annual revenue
+📍 Paris, 🧑‍💻 between ~15 and ~25 employees, 📈 €1.5 million in annual revenue
 
 **Web Developer**
 
