@@ -30,3 +30,11 @@ class Client:
 
     def initial_prompt_size(self):
         return len(self.tokenize(context()))
+
+    def server_up(self):
+        try:
+            return (
+                requests.get(f"{SERVER_URL}/health", timeout=2).json()["status"] == "ok"
+            )
+        except Exception:
+            return False
