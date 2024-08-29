@@ -16,5 +16,8 @@ certbot
 # listen [::]:443 ssl ipv6only=on http2; # managed by Certbot
 # listen 443 ssl http2; # managed by Certbot
 
+# Edit /etc/nginx/nginx.conf and uncomment server_tokens off;
+systemctl reload nginx
+
 # auto-renew certificate
 systemctl status certbot.timer
