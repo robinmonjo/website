@@ -19,7 +19,7 @@ from components.chat_box import (
 )
 from components.home_text import HomeText
 from components.tweet_list import TweetList, TweetListHeader
-from llm.agent import Agent
+from llm.agent import Agent, llm_server_up
 from tweets import tweets_db
 
 dev_env = os.getenv("PYTHON_ENV", "development") == "development"
@@ -140,6 +140,11 @@ def get(req):
         current_path=req.url.path,
         description="Robin Monjo education",
     )
+
+
+@rt("/llm_server_health")
+def get():
+    return "ok" if llm_server_up() else "error"
 
 
 @rt("/ask_llm")

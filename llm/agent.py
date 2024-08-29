@@ -39,3 +39,7 @@ class Agent:
 
     def session_exists(self):
         return os.path.isfile(self.session_file)
+
+
+def llm_server_up():
+    return Client().server_up()
