@@ -187,10 +187,10 @@ def ChatMessageChunk(chunk, idx, clear_existing=False):
 def About():
     return Small(
         Fa("info-circle"),
-        "Please, be indulgent 😊. You're interacting with a self-hosted 3.8B parameters LLM:",
+        "Please, be indulgent and do not believe everything 😊. You're interacting with a self-hosted 3.8B parameters LLM:",
         Atb(
             "Phi 3.1 mini",
-            href="https://huggingface.co/microsoft/Phi-3-mini-128k-instruct",
+            href="https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
         ),
         "with 4-bit quantized weights, running on a €15 VPS. This is not Chat GPT 😋.",
         "Chat sessions are recorded for improvements purposes but remain 100% anonymous.",
