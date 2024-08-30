@@ -223,6 +223,16 @@ async def get(fname: str):
     return FileResponse(f"{fname}.pdf")
 
 
+@rt("/sitemap.xml")
+async def get():
+    return FileResponse("sitemap.xml")
+
+
+@rt("/robots.txt")
+async def get():
+    return FileResponse("robots.txt")
+
+
 def Layout(*args, **kwargs):
     current_path = kwargs.pop("current_path")
     description = kwargs.pop("description", "")
