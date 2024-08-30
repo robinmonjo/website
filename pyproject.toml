@@ -1,0 +1,19 @@
+[project]
+name = "website"
+version = "0.1.0"
+description = "Personal website"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-fasthtml>=0.4.5",
+    "openai>=1.43.0",
+    "requests>=2.32.3",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "twikit>=2.1.3",
+    "notebook>=7.2.2",
+    "black>=24.8.0",
+    "pylint>=3.2.6",
+]

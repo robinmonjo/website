@@ -9,5 +9,5 @@ def HomeBtn(icon, label, href, **kwargs):
         Fa("caret-right", style="margin-left: 10px;"),
         href=href,
         role="button",
-        **kwargs
+        **kwargs,
     )

@@ -1,5 +1,5 @@
 lint:
-	black . && pylint --recursive=y .
+	uv run black . && uv run pylint --recursive=y .
 
 SERVER_IP := 2a01:4f8:1c1c:8d49::1
 COUNTAINER_NAME := website
