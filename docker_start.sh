@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_ENV="production" PORT=80 WEB_CONCURRENCY=4 python main.py &
+PYTHON_ENV="production" PORT=80 WEB_CONCURRENCY=4 .venv/bin/python main.py &
 make serve-llm &
 
 # Wait for any process to exit

@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install --upgrade pip && pip install -r requirements/prod.txt
+RUN pip install --upgrade pip && \
+    pip install --upgrade uv && \
+    uv sync --no-dev
 
 CMD ["bash", "docker_start.sh"]

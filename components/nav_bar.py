@@ -76,7 +76,7 @@ def DesktopLinks(*, current_path):
             for (label, path) in MENU_ITEMS
         ],
         Li("|", style="color: lightgrey"),
-        *BrandItemsLinks()
+        *BrandItemsLinks(),
     )
 
 
@@ -93,7 +93,7 @@ def MobileLinks(*, current_path):
                 Ul(
                     *[Li(A(label, href=path)) for (label, path) in MENU_ITEMS],
                     *BrandItemsLinks(),
-                    dir="rtl"
+                    dir="rtl",
                 ),
                 cls="dropdown",
             )
