@@ -334,14 +334,14 @@ wheels = [
 
 [[package]]
 name = "fastcore"
-version = "1.7.1"
+version = "1.7.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "packaging" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2e/16/7f575df51f7f6d32c4ba00441b9b78a4f8f28f3834262931a7fab163ae8d/fastcore-1.7.1.tar.gz", hash = "sha256:102a9fc7711796581ab6dbdb4083c60080cb364a9d86eb3f0c54222aef4a6024", size = 73778 }
+sdist = { url = "https://files.pythonhosted.org/packages/71/12/811b979f164b981a11c32b94ea3f70453ad40d7f873f9a194799f0f1e902/fastcore-1.7.2.tar.gz", hash = "sha256:760312289f863deea20399a84ac399e9a2da1ac5c694a13b775d6ea76bcbb452", size = 75922 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/d3/5cd9c382c3d50567bd43e08da945eee3b0018fab33df01d5f0fa45e335d7/fastcore-1.7.1-py3-none-any.whl", hash = "sha256:dc1f455878e603e5b72fae980282085b47958b620b76c0ea3fd59cd4693374ec", size = 77299 },
+    { url = "https://files.pythonhosted.org/packages/a6/96/42e26f3aadccddc423f96b0d09beedc36634e7dbdf191c9bcdf69dfac651/fastcore-1.7.2-py3-none-any.whl", hash = "sha256:b33f9d21a354ba6be5d0a05800524d38e18cd3c2bf91b426481492c01c718da9", size = 79551 },
 ]
 
 [[package]]
@@ -1239,7 +1239,7 @@ wheels = [
 
 [[package]]
 name = "python-fasthtml"
-version = "0.4.5"
+version = "0.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -1253,9 +1253,9 @@ dependencies = [
     { name = "starlette" },
     { name = "uvicorn", extra = ["standard"] },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2a/a7/c597bfad81a2a90cd75e030f76aba24008b9d564cea6756c8b77e2bfcc25/python-fasthtml-0.4.5.tar.gz", hash = "sha256:e3a8b1de9097f91097fbf6cd62cf4ff72f708738428f4ede5c69a2a110401f2c", size = 40652 }
+sdist = { url = "https://files.pythonhosted.org/packages/58/5f/86b92ec2446a5518873a988a8459fdf19276aae3d84ad4406e494865ea43/python-fasthtml-0.5.0.tar.gz", hash = "sha256:c7c405766d5935855434334912f3d291015e293e5cc65cd05f452c0f6c81c62d", size = 42775 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e4/4b/be5ff8c3217f4fcd4603c7de0a98c06f8839e61d1d6d7eaa36210e3022b9/python_fasthtml-0.4.5-py3-none-any.whl", hash = "sha256:ffb9d6ad1eedb5fcdada96d633a8fd4d9102693183360846f8b2e88b8c8b806d", size = 44121 },
+    { url = "https://files.pythonhosted.org/packages/81/1a/2ee4e39f6a23825563d55ecf0d80e1b09466875f770127115708cabf9704/python_fasthtml-0.5.0-py3-none-any.whl", hash = "sha256:de07bf19edf3205b2b3b9ac912f12e182d048a2cfd797ca2f71109bf2c6cc801", size = 46274 },
 ]
 
 [[package]]

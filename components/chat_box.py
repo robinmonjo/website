@@ -97,13 +97,13 @@ def MessageForm(session_key):
     return Form(
         ChatBar(),
         Input(type="hidden", name="session_key", value=session_key),
+        HtmxOn("wsAfterMessage", """
+            scrollMessagesListDown();
+            deleteSuggestedQuestions();
+        """),
         hx_ext="ws",
         ws_connect="/messages_ws",
         ws_send=True,
-        hx_on_htmx_ws_after_message="""
-            scrollMessagesListDown();
-            deleteSuggestedQuestions();
-        """,
         id="msg-form",
     )
 
