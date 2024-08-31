@@ -237,7 +237,7 @@ def Layout(*args, **kwargs):
     current_path = kwargs.pop("current_path")
     description = kwargs.pop("description", "")
     return (
-        Title("R. Monjo"),
+        Title("Robin Monjo"),
         NavBar(current_path=current_path),
         Main(Div(*args, **kwargs), cls="container"),
         PageFooter(),
