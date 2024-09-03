@@ -4,6 +4,7 @@ import time
 import json
 import uuid
 from fasthtml.common import *
+from components.markdown import CustomMarkdownJSAndCSS
 from components.nav_bar import NavBar
 from components.education_card import EducationCard
 from components.favicon_link import FaviconLink
@@ -25,7 +26,7 @@ from tweets import tweets_db
 dev_env = os.getenv("PYTHON_ENV", "development") == "development"
 
 hdrs = (
-    MarkdownJS(),
+    CustomMarkdownJSAndCSS(),
     Script(
         src="https://kit.fontawesome.com/e68e45d4cb.js",
         crossorigin="anonymous",
