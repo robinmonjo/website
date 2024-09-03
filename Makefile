@@ -18,7 +18,7 @@ stop:
 
 deploy: build stop run
 
-MODEL := Phi-3.1-mini-4k-instruct-Q4_K_M.gguf
+MODEL := Phi-3.5-mini-instruct-Q4_K_M.gguf
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
@@ -28,4 +28,4 @@ else ifeq ($(UNAME), Darwin)
 endif
 
 serve-llm:
-	./$(LLAMA_SERVER) -m models/${MODEL} --host 127.0.0.1 --port 8000 -cnv --mlock --log-disable
+	./$(LLAMA_SERVER) -m models/${MODEL} --host 127.0.0.1 --port 8000 -cnv --mlock --log-disable --ctx-size 4096

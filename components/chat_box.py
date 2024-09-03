@@ -192,8 +192,8 @@ def About():
         Fa("info-circle"),
         "Please, be indulgent and do not believe everything 😊. You're interacting with a self-hosted 3.8B parameters LLM:",
         Atb(
-            "Phi 3.1 mini",
-            href="https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+            "Phi 3.5 mini",
+            href="https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
         ),
         "with 4-bit quantized weights, running on a €15 VPS. This is not Chat GPT 😋.",
         "Chat sessions are recorded for improvements purposes but remain 100% anonymous.",
