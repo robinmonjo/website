@@ -28,4 +28,4 @@ else ifeq ($(UNAME), Darwin)
 endif
 
 serve-llm:
-	./$(LLAMA_SERVER) -m models/${MODEL} --host 127.0.0.1 --port 8000 -cnv --mlock --log-disable --ctx-size 4096
+	./$(LLAMA_SERVER) -m models/${MODEL} --host 127.0.0.1 --port 8000 --mlock --log-disable --ctx-size 4096
