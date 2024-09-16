@@ -19,12 +19,12 @@ def PageFooter():
                     href="https://www.fastht.ml/",
                     style="text-decoration: none;",
                 ),
-                "-",
+                "- ",
                 Atb(
                     "Report an issue 🐞",
                     href="https://github.com/robinmonjo/website/issues",
                 ),
-                "-",
+                " - ",
                 Atb(
                     "Show me the code 🤓", href="https://github.com/robinmonjo/website"
                 ),
