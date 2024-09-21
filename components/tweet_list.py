@@ -51,7 +51,7 @@ def Header(tweet):
         Small(tweet.created_at_datetime().strftime("%d %b. %Y"), style="color: grey;"),
         Small(
             Atb(
-                "see Tweet",
+                "see Tweet ",
                 Fa("arrow-up-right-from-square", size="xs"),
                 href=tweet.url(),
             ),
