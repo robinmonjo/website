@@ -8,7 +8,7 @@ def PageFooter():
         Hr(),
         Div(
             Small(
-                "Built with",
+                "Built with ",
                 Atb(
                     Img(
                         src="/content/fasthtml_logo.svg",
