@@ -1,3 +1,5 @@
+.PHONY: lint build run stop deploy update-tweets-db serve-llm
+
 lint:
 	uv run black . && uv run pylint --recursive=y .
 
