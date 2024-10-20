@@ -86,9 +86,10 @@ def get(req):
     return Layout(
         HomeText(
             Img(
-                src="/content/profile_pictures/picture1.jpeg",
+                src="/content/profile_pictures/picture1.webp",
                 alt="profile picture",
                 width="130",
+                height="130",
                 style="border-radius: 130px; margin-bottom: 20px;",
             ),
             Div(

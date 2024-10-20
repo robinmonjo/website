@@ -47,7 +47,7 @@ def NavBar(current_path="/"):
 
 
 def DesktopNavBar(current_path="/", **kwargs):
-    return Nav(SiteIcon(), DesktopLinks(current_path=current_path), **kwargs)
+    return Nav(SiteIcon(), DesktopLinks(current_path=current_path), style="justify-content: space-between", **kwargs)
 
 
 def MobileNavBar(current_path="/", **kwargs):
