@@ -73,7 +73,7 @@ bware = Beforeware(before, skip=[r"/favicon\.ico", r"/content/.*", r".*\.css"])
 
 app, rt = fast_app(
     hdrs=hdrs,
-    ws_hdr=True,
+    exts=["ws"],
     debug=dev_env,
     live=dev_env,
     before=bware,
