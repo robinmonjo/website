@@ -190,7 +190,7 @@ def ChatMessageChunk(chunk, idx, clear_existing=False):
 def About():
     return Small(
         Fa("info-circle"),
-        " Please, be indulgent and do not believe everything 😊. You're interacting with a self-hosted 3.8B parameters LLM: ",
+        " Please, be indulgent and do not believe everything 😊. You're interacting with a self-hosted 3B parameters LLM: ",
         Atb(
             "Qwen 2.5 3B",
             href="https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/blob/main/qwen2.5-3b-instruct-q4_k_m.gguf",
