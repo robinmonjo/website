@@ -192,10 +192,10 @@ def About():
         Fa("info-circle"),
         " Please, be indulgent and do not believe everything 😊. You're interacting with a self-hosted 3.8B parameters LLM: ",
         Atb(
-            "Phi 3.5 mini ",
-            href="https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
+            "Qwen 2.5 3B",
+            href="https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/blob/main/qwen2.5-3b-instruct-q4_k_m.gguf",
         ),
-        "with 4-bit quantized weights, running on a €15 VPS. This is not Chat GPT 😋. ",
+        " with 4-bit quantized weights, running on a €15 VPS. This is not Chat GPT 😋. ",
         "Chat sessions are recorded for improvements purposes but remain 100% anonymous. ",
         ResetSessionBtn(),
     )

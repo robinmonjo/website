@@ -45,3 +45,5 @@ README.md
 .cache
 
 chat_sessions/*
+
+models/Phi-3.5-mini-instruct-Q4_K_M.gguf

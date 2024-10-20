@@ -5,7 +5,7 @@ from components.title import Title
 MENU_ITEMS = [
     ("Resume", "/resume"),
     ("Education", "/education"),
-    ("Ask Phi", "/ask_llm"),
+    ("Ask Qwen", "/ask_llm"),
     ("Reading List", "/reading_list"),
 ]
 

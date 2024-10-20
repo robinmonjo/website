@@ -100,7 +100,7 @@ def get(req):
         Div(
             HomeBtn("briefcase", "Resume", "/resume"),
             HomeBtn("school", "Education", "/education"),
-            HomeBtn("comment", "Ask Phi", "/ask_llm"),
+            HomeBtn("comment", "Ask Qwen", "/ask_llm"),
             HomeBtn("book", "Reading List", "/reading_list"),
             Style(
                 """

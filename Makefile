@@ -23,7 +23,7 @@ deploy: build stop run
 update-tweets-db:
 	cd nbs && uv run sync_liked_tweets.py
 
-MODEL := Phi-3.5-mini-instruct-Q4_K_M.gguf
+MODEL := qwen2.5-3b-instruct-q4_k_m.gguf
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
