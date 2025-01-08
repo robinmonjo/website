@@ -7,7 +7,15 @@
     "years": "Sept. 2024 - Dec. 2024",
     "notes": "MINES Paris certification",
     "website": "https://datascientest.com/en/",
-    "logo": "education_logos/datascientest.png"
+    "logo": "education_logos/datascientest.png",
+    "courses": [
+      "Exploratory Data Analysis",
+      "Data Visualization",
+      "Feature Engineering and Dimensionality Reduction",
+      "Machine Learning: Classification, Regression, Clustering",
+      "Advanced Machine Learning Topics: Recommendation Systems, Time Series Analysis",
+      "Deep Learning: Neural Networks, Convolutional Neural Networks, Natural Language Processing"
+    ]
   },
   {
     "establishment": "Polytech Nice-Sophia",
