@@ -2,4 +2,4 @@
 
 Recently completed a Data Science Bootcamp, where I deepened my expertise in Machine Learning.
 
-Now seeking opportunities to apply and expand my technical skills in impactful projects. Let’s connect and build something great! 😉
+Now seeking opportunities to apply and expand my technical skills in impactful projects. [Let’s connect](mailto:hey@hellorob.in) and build something great! 😉
