@@ -143,6 +143,6 @@ Ski instructor, teaching alpine skiing to French and English-speaking clients
 
 ## Interests
 
-- **Sports:** Practicing skiing, running, cycling and hiking. Following: tennis, soccer, cycling and more.
+- **Sports:** Practicing skiing, running, cycling and hiking. <a href="https://www.strava.com/athletes/142326314" target="_blank" rel="noopener noreferrer">Follow me on Strava</a>. Following: tennis, soccer, cycling and more.
 - **Theoretical Physics:** Hobbyist with a keen interest in general relativity and quantum physics.
 - **Computer Science:** Naturally passionate about the field 😋.
