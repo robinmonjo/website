@@ -3,10 +3,10 @@
 lint:
 	uv run black . && uv run pylint --recursive=y .
 
-SERVER_IP := 2a01:4f8:1c1c:8d49::1
+SERVER_IP := 167.235.24.208
 COUNTAINER_NAME := website
 
-export DOCKER_HOST=ssh://root@[${SERVER_IP}]
+export DOCKER_HOST=ssh://root@${SERVER_IP}
 
 build:
 	docker build --network=host -t website:latest .
